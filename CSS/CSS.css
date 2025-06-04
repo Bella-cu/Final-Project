@@ -44,19 +44,33 @@
 
     h1 {
         font-family: 'chewy', cursive;
-        font-size: 6%;
+        font-size: 6rem;
+    }
+
+    .title {
+        font-size: 11rem;
+        left: 5%;
+        margin-top: -.1%;
+        z-index: 5;
+        color: #7ad0e2;
+        position: absolute;
+        font-weight: 100;
+    }
+
+    .sub {
+        color: white;
+        font-size: 3rem;
+        position: absolute;
+        left: 5.1%;
+        top: 50%;
+        z-index: 6;
+        font-family: 'raleway', sans-serif;
     }
 
     html {
         font-size: 62.5%;
     }
 
-    .cover h1 {
-        color: #7ad0e2;
-        position: absolute;
-        z-index: 50;
-        font-weight: 700;
-    }
 
     .overlay {
         position: absolute;
