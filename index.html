@@ -13,22 +13,72 @@
 
 </head>
 <style>
+    #menu {
+        width: fit-content;
+        overflow: hidden;
+    }
 
+
+    #menu img {
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+    }
+
+    #menu img.active {
+        opacity: 1;
+    }
+
+    #menu-overlay {
+        background-color: linear-gradient(135deg, #79cee0, #ff89a4);
+        opacity: 54%;
+        z-index: 20;
+        width: 75px;
+    }
 </style>
 <header>
-    <div class="nav1"></div>
+    <div class="nav1">
+        <figure class="social-nav">
+            <img src="Images.html/instagram_2111463.png" />
+            <img src="Images.html/facebook_1384053.png" />
+        </figure>
+    </div>
     <div class="cover">
         <img src="Images.html/Cover.png" alt="Responsive Image" />
         <div class="gradient"></div>
         <div class="overlay"></div>
         <img id="logo" src="Images.html/logo.png" />
-        <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span></h1>
+        <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
+        </h1>
         <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
     </div>
     <div class="nav1"></div>
 </header>
+<figure class="banner">
+    <img src="Images.html/freepik__adjust__78665.png">
+</figure>
 
 <body>
+    <div id="menu-overlay"></div>
+    <div id="menu">
+        <img src="Images.html/sls1.png" class="active">
+        <img src="Images.html/sls2.png">
+        <img src="Images.html/sls3.png">
+        <img src="Images.html/sls4.png">
+        <img src="Images.html/sls5.png">
+        <img src="Images.html/sls6.png">
+    </div>
+    <script>
+        const slides = document.querySelectorAll('#menu img');
+        let current = 0;
+
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 3000); // Change image every 3 seconds
+    </script>
 </body>
 
 </html>
