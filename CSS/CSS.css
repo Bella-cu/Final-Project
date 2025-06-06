@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .nav1 {
     width: 100%;
     height: clamp(1px, 6vh, 55px);
