@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 .nav1 {
     width: 100%;
     height: clamp(1px, 6vh, 55px);
@@ -12,25 +13,34 @@
     overflow: hidden;
 }
 
+h2 {
+    font-family: 'bebas-neue', sans-serif;
+    font-size: 3vw;
+    text-transform: uppercase;
+    transform: scaleY(1.3);
+}
+
 main {
     margin: 0;
-    padding: 20%;
+    padding: 5% 10%;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: linear-gradient(135deg, #ffeaef, #ecfbff);
+    background-image: linear-gradient(135deg, #ffeaef, #ecfbff);
 }
 
 .banner img {
     margin: 0;
     width: 100%;
+    padding: 0;
 }
 
 .banner {
     margin: 0;
+    padding: 0;
     width: 100%;
 
 }
@@ -81,7 +91,7 @@ h1 {
     font-size: 2vw;
     position: absolute;
     left: 5.1%;
-    top: 54%;
+    top: 70%;
     z-index: 6;
     font-family: 'raleway', sans-serif;
 }
