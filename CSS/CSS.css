@@ -9,7 +9,7 @@
 }
 .nav1 {
     width: 100%;
-    height: clamp(1px, 6vh, 55px);
+    height: clamp(1px, 4vw, 5vw);
     background-color: #e2bfa0;
     display: flex;
     justify-content: flex-end;
@@ -75,23 +75,23 @@ nav a:hover {
 }
 
 .email {
+    transform: scale(1.1);
     font-weight: bold;
     display: block;
-    margin: 10px 0;
+    margin: 5% 0;
     color: #e94973;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .email:hover {
     color: #70b3c1;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .social-icons img {
     width: clamp(20px, 3vw, 3vw);
     margin: 0 5px;
-    transition: transform 0.3s linear;
-}
+    transition: transform 0.3s linear;}
 
 .social-icons :hover {
     transform: scale(1.2);
@@ -186,8 +186,14 @@ h1 {
 
 
 .social-nav img {
-    width: clamp(10px, 4vh, 40px);
+    width: clamp(13px, 3vw, 4vw);
     margin-right: 1vw;
+    transition: transform 0.3s linear;
+}
+
+.social-nav :hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 html {
