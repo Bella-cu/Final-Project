@@ -26,8 +26,8 @@ h2 {
 
 p {
     font-family: 'raleway', sans-serif;
-    font-size: 1.2vw;
-    line-height: clamp(3vh, 5vh, 5.5vh);
+    font-size: clamp(8px, 1.2vw, 2vw);
+    line-height: clamp(1px, 5vh, 5.5vh);
 }
 
 footer {
@@ -64,7 +64,7 @@ nav a {
     color: #444;
     font-weight: bold;
     margin: 0 5px;
-    font-size: clamp(1vw, 1.5vw, 1.5vw);
+    font-size: clamp(8px, 1.5vw, 1.5vw);
     transition: transform 0.5s ease, color 0.3s ease;
 }
 
@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 .social-icons img {
-    width: 3vw;
+    width: clamp(20px, 3vw, 3vw);
     margin: 0 5px;
     transition: transform 0.3s linear;
 }
