@@ -51,21 +51,20 @@
     button {
         position: absolute;
         background-color: #79d3de;
-        color: white;
+        color: rgb(0, 0, 0);
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 4vw;
+        font-size: clamp(1vw, 3vw, 4vw);
         font-weight: 100;
         border: none;
         padding: 1% 3%;
-        border-radius: 25%;
         cursor: pointer;
+        transition: .5s linear;
     }
 
     button:hover {
         background-color: #ff89a4;
-        transition: .5s ease-in-out;
-        transform: scale(1.1);
-        color: whitesmoke;
+        transform: scale(1.2);
+        color: #000000;
     }
 
     .caption {
@@ -76,7 +75,7 @@
         padding: 3%;
         margin: 0%;
         font-family: 'Raleway', sans-serif;
-        font-size: 1vw;
+        font-size: clamp(0.8rem, 1vw, 2vw);
     }
 
     #menu-section {
@@ -87,7 +86,7 @@
 
     #specials {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: no-wrap;
         /* Wrap on smaller screens */
         justify-content: space-between;
         /* Spacing between images */
@@ -117,10 +116,94 @@
         width: 100%;
     }
 
-    #trend {
+    #trend span {
         color: black;
-        text-transform: lowercase;
-        font-weight: 100;
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 2vw;
+        font-family: 'raleway', sans-serif;
+    }
+
+    #trend h2 {
+        margin-top: 15%;
+    }
+
+    #trend img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #trend figcaption {
+        background-color: #eafbff;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 8px;
+        font-family: 'Raleway', sans-serif;
+        font-size: clamp(0.8rem, 1vw, 2vw);
+        box-sizing: border-box;
+    }
+
+    #trend-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: no-wrap;
+        margin-top: 5%;
+    }
+
+    #trend figure {
+        width: clamp(5px, 20vw, 200px);
+        margin: 10px;
+        border: 4px solid #ff87a3;
+        overflow: hidden;
+    }
+
+    #about {
+        margin-top: 10%;
+        padding: 3% 5%;
+        background-color: #fa97ac;
+        color: black;
+        border: 4px solid #7ad0e2;
+    }
+
+    #about h2 {
+        text-align: center;
+        padding-bottom: 1.5%;
+    }
+
+    #review-sub {
+        color: black;
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 1.8vw;
+        padding-top: 2%;
+    }
+
+    #review-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5%;
+    }
+
+    #review-grid img {
+        width: 100%;
+    }
+
+    #reviews {
+        padding: 5%;
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        margin-top: 10%;
+        justify-content: center;
+        background-color: #79d3de;
+        border: 4px solid #fa97ac;
+        align-items: center;
+        margin-top: 15%;
     }
 </style>
 
@@ -176,10 +259,98 @@
                 <figcaption class="caption">Gluten Free</figcaption>
             </figure>
         </div>
-        <section>
-            <h2>Trending Now <span id="trend" class="sub">- What’s hot (and cold) right now.</span></h2>
+        <section id="trend">
+            <h2>Trending Now <span>- What’s hot (and cold) right now.</span></h2>
+            <div id="trend-items">
+                <figure><img src="Images.html/Trend1.png">
+                    <figcaption>Pistachio Ice Cream – $7.00</figcaption>
+                </figure>
+                <figure><img src="Images.html/Trend2.png">
+                    <figcaption>California Chicken Clubhouse - $17.00</figcaption>
+                </figure>
+                <figure><img src="Images.html/Trend3.png">
+                    <figcaption>Ube Ice Cream - $6.00</figcaption>
+                </figure>
+            </div>
+        </section>
+        <article id="about">
+            <h2>About</h2>
+            <p>Since its launch in 2019, Dug & Betty's Ice Creamery has been establishing itself as one of Winnipeg's
+                latest culinary hot spots. The Parisian-inspired setting is unlike anything this side of the Prairies -
+                home to tantalizing small batch gourmet ice cream creations such as Strawberry Honey Balsamic Pepper,
+                Sour Cherry with Dark Chocolate, Coconut Chocolate Fudge Oreo, Ube, and Matcha.<br>
+
+                Dug & Betty's Ice Creamery is the latest brain child of Chef Fern Kirouac. It's located in the heart of
+                Winnipeg's French quarter, Saint-Boniface; across the street from his other culinary success, InFerno's
+                Bistro. It was named after his cherished basset hounds (who are the unofficial ambassadors). Also named
+                after the duo are creations like the Dashing Dug Sundae and the Bad Betty Sundae.<br>
+
+                The animated menu also offers a wide range of lush spirits like champagne / beer floats and a bold
+                selection of fine wines. These can be enjoyed inside the 30-seat establishment or outdoors on the patio.
+            </p>
+        </article>
+        <section id="reviews">
+            <div>
+                <h2>Customer Reviews</h2>
+                <p id="review-sub">"Naturally loved by our customers."</p>
+            </div>
+            <div id="review-grid">
+                <figure>
+                    <img src="Images.html/review1.png">
+                </figure>
+                <figure>
+                    <img src="Images.html/review2.png">
+                </figure>
+                <figure>
+                    <img src="Images.html/review3.png">
+                </figure>
+                <figure>
+                    <img src="Images.html/review4.png">
+                </figure>
+            </div>
         </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                <p>309 Des Meurons Street<br>
+                    Winnipeg, Manitoba, Canada R2H 2N4<br>
+                    204-417-0026</p>
+            </div>
+
+            <div class="footer-middle">
+                <nav>
+                    <a href="#">Home</a> |
+                    <a href="#">About</a> |
+                    <a href="#">Flavours</a> |
+                    <a href="#">Menu</a> |
+                    <a href="#">Location</a> |
+                    <a href="#">Hours</a> |
+                    <a href="#">Contact</a>
+                </nav>
+                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <div class="social-icons">
+                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Hours of Operation</h3>
+                <p>
+                    Monday Closed<br>
+                    Tuesday 11:00am - 8:00pm<br>
+                    Wednesday 11:00am - 8:00pm<br>
+                    Thursday 11:00am - 8:00pm<br>
+                    Friday 11:00am - 8:00pm<br>
+                    Saturday 11:00am - 8:00pm<br>
+                    Sunday 11:00am - 8:00pm
+                </p>
+            </div>
+        </div>
+                        <p class="copyright">© Dug & Betty’s 2025</p>
+    </footer>
 </body>
 <script>
 
