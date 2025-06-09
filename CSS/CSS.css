@@ -86,7 +86,34 @@ figcaption {
     font-size: clamp(0.8rem, 1vw, 2vw);
     box-sizing: border-box;
 }
+.menu-view figure:hover h4{
+    opacity: 1;
+        font-size: 2vw;
+}
+        .menu-view figure:hover img {
+            cursor: pointer;
+            transform: scale(1.2);
+            filter: brightness(30%);
+        }
 
+        .menu-view figure img {
+            transition: transform 1s ease ,filter 1s ease;
+            height: 100%;
+        }
+        .menu-view figure h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    transition: 1s ease;
+    font-size: 1.5vw;
+    width: 100%;
+}
 .email {
     transform: scale(1.1);
     font-weight: bold;

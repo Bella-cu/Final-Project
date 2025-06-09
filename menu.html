@@ -30,33 +30,6 @@ figure {
     position: relative;
 }
 
-.menu-4 figure h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: aliceblue;
-    z-index: 2;
-    opacity: 0;
-    pointer-events: none;
-    margin: 0;
-    transition: 1s ease;
-    font-size: 1.5vw;
-    width: 100%;
-}
-.menu-4 figure:hover h4{
-    opacity: 1;
-        font-size: 2vw;
-}
-        .menu-4 figure:hover img {
-            cursor: pointer;
-            transform: scale(1.2);
-            filter: brightness(30%);
-        }
-
-        .menu-4 figure img {
-            transition: transform 1s ease ,filter 1s ease;
-        }
 
         .overlay {
             opacity: 70%;
@@ -71,6 +44,9 @@ figure {
         #frozen-desserts figure {
             text-align: center;
             width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             transform: scaleY(1.1);
             overflow: hidden;
             justify-content: center;
@@ -84,7 +60,7 @@ figure {
         }
 
         #frozen-desserts figcaption {
-            height: fit-content;
+            opacity: 1;
         }
 
         #dishes figcaption {
@@ -93,6 +69,8 @@ figure {
 
         #frozen-desserts img {
             width: 100%;
+            height: auto;
+            display: block;
         }
 
         #dishes img {
@@ -141,7 +119,7 @@ figure {
         }
 
         figcaption {
-            z-index: 2;
+            z-index: 5;
             position: relative;
         }
     </style>
@@ -169,7 +147,7 @@ figure {
         <img src="Images.html/menu-banner.png" alt="Menu Banner" />
     </figure>
     <main>
-        <section class="menu-4">
+        <section class="menu-4 menu-view">
             <h2>Frozen Desserts</h2>
             <div id="frozen-desserts">
                 <figure class="pink">
@@ -198,7 +176,7 @@ figure {
                 </figure>
             </div>
         </section>
-        <section class="menu-4">
+        <section class="menu-4 menu-view">
             <h2>Dishes</h2>
             <div id="dishes">
                 <figure class="pink">
@@ -239,7 +217,7 @@ figure {
                 </figure>
             </div>
         </section>
-        <section class="menu-4">
+        <section class="menu-4 menu-view">
             <h2>Specialties</h2>
             <div id="frozen-desserts">
                 <figure class="pink">
