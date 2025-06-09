@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <style>
+        .title {
+            position: absolute;
+            color: whitesmoke;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000000;
+            background-color: #0000005a;
+            box-shadow: 0 0 6vw #ff87a3a8;
+            padding: .5vw 50%;
+            border-radius: 10px;
+        }
+
+figure {
+    position: relative;
+}
+
+.menu-4 figure h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    transition: 1s ease;
+    font-size: 1.5vw;
+    width: 100%;
+}
+.menu-4 figure:hover h4{
+    opacity: 1;
+        font-size: 2vw;
+}
+        .menu-4 figure:hover img {
+            cursor: pointer;
+            transform: scale(1.2);
+            filter: brightness(30%);
+        }
+
+        .menu-4 figure img {
+            transition: transform 1s ease ,filter 1s ease;
+        }
+
+        .overlay {
+            opacity: 70%;
+        }
+
+        .cover {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #frozen-desserts figure {
+            text-align: center;
+            width: 20%;
+            transform: scaleY(1.1);
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        #dishes figure {
+            text-align: center;
+            width: 60%;
+            transform: scaleY(1.1);
+            overflow: hidden;
+        }
+
+        #frozen-desserts figcaption {
+            height: fit-content;
+        }
+
+        #dishes figcaption {
+            height: fit-content;
+        }
+
+        #frozen-desserts img {
+            width: 100%;
+        }
+
+        #dishes img {
+            width: 100%
+        }
+
+        #frozen-desserts {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        #dishes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 9vw;
+            place-items: center;
+        }
+
+        .menu-4 {
+            margin-top: 10%;
+            width: 100%;
+        }
+
+        .menu-4 h2 {
+            padding-bottom: 2vw;
+        }
+
+        .blue {
+            border: 7px solid #88cad1;
+        }
+
+        .blue figcaption {
+            border-top: 8px solid #88cad1;
+            margin-top: -2%;
+        }
+
+        .pink {
+            border: 7px solid #fa97ac;
+        }
+
+        .pink figcaption {
+            margin-top: -2%;
+            border-top: 8px solid #fa97ac;
+        }
+
+        figcaption {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav1">
+            <figure class="social-nav">
+                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
+                    <img src="Images.html/instagram_2111463.png" /></a>
+                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
+                    <img src="Images.html/facebook_1384053.png" /></a>
+            </figure>
+        </div>
+        <div class="cover">
+            <img src="Images.html/Cover2.png" alt="Responsive Image" />
+            <div class="gradient"></div>
+            <div class="overlay"></div>
+            <h1 class="title">Menu
+            </h1>
+        </div>
+    </header>
+    <figure class="banner">
+        <img src="Images.html/menu-banner.png" alt="Menu Banner" />
+    </figure>
+    <main>
+        <section class="menu-4">
+            <h2>Frozen Desserts</h2>
+            <div id="frozen-desserts">
+                <figure class="pink">
+                    <img src="Images.html/pint.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/soft.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="pink">
+                    <img src="Images.html/cookie.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/cones.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="menu-4">
+            <h2>Dishes</h2>
+            <div id="dishes">
+                <figure class="pink">
+                    <img src="Images.html/salad.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/sandwich.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="pink">
+                    <img src="Images.html/hot.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/pastry.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="pink">
+                    <img src="Images.html/shake.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/drink.png"><h4>View More</h4>
+                    <figcaption>
+                        Pints
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="menu-4">
+            <h2>Specialties</h2>
+            <div id="frozen-desserts">
+                <figure class="pink">
+                    <img src="Images.html/vegan.png"><h4>View More</h4>
+                    <figcaption>
+                        Vegan
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/dairy.png"><h4>View More</h4>
+                    <figcaption>
+                        Dairy Free
+                    </figcaption>
+                </figure>
+                <figure class="pink">
+                    <img src="Images.html/dog.png"><h4>View More</h4>
+                    <figcaption>
+                        Dog Safe
+                    </figcaption>
+                </figure>
+                <figure class="blue">
+                    <img src="Images.html/gluten-free.png"><h4>View More</h4>
+                    <figcaption>
+                        Gluten Free
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                <p>309 Des Meurons Street<br>
+                    Winnipeg, Manitoba, Canada R2H 2N4<br>
+                    204-417-0026</p>
+            </div>
+
+            <div class="footer-middle">
+                <div class="nav">
+                    <a href="index.html">Home</a> |
+                    <a href="menu.html">Menu</a> |
+                    <a href="#">All Items</a> |
+                    <a href="#">Contact</a>
+                </div>
+                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <div class="social-icons">
+                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Hours of Operation</h3>
+                <p>
+                    Monday Closed<br>
+                    Tuesday 11:00am - 8:00pm<br>
+                    Wednesday 11:00am - 8:00pm<br>
+                    Thursday 11:00am - 8:00pm<br>
+                    Friday 11:00am - 8:00pm<br>
+                    Saturday 11:00am - 8:00pm<br>
+                    Sunday 11:00am - 8:00pm
+                </p>
+            </div>
+        </div>
+        <p class="copyright">© Dug & Betty’s 2025</p>
+    </footer>
+</body>
+
+</html>

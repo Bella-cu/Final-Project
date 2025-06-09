@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-.copyright{
+
+.copyright {
     width: 100%;
     text-align: center;
     margin-top: -1%;
 }
+
 .nav1 {
     width: 100%;
     height: clamp(1px, 4vw, 5vw);
@@ -32,7 +34,7 @@ p {
 
 footer {
     background-color: #fdf5dc;
-    padding: 4% 2% 1%  2%;
+    padding: 4% 2% 1% 2%;
     font-family: 'Arial', sans-serif;
     font-size: 1.2vw;
     color: #444;
@@ -58,7 +60,7 @@ footer {
     margin-bottom: 10px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     display: inline-block;
     color: #444;
@@ -68,10 +70,21 @@ nav a {
     transition: transform 0.5s ease, color 0.3s ease;
 }
 
-nav a:hover {
+.nav a:hover {
     color: #e94973;
     text-decoration: underline;
     transform: scale(1.2);
+}
+
+figcaption {
+    background-color: #eafbff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(0.8rem, 1vw, 2vw);
+    box-sizing: border-box;
 }
 
 .email {
@@ -91,7 +104,8 @@ nav a:hover {
 .social-icons img {
     width: clamp(20px, 3vw, 3vw);
     margin: 0 5px;
-    transition: transform 0.3s linear;}
+    transition: transform 0.3s linear;
+}
 
 .social-icons :hover {
     transform: scale(1.2);
@@ -166,12 +180,8 @@ h1 {
 
 .title {
     font-size: 9vw;
-    left: 5%;
-    margin-top: -.1%;
-    z-index: 5;
-    color: #7ad0e2;
-    position: absolute;
     font-weight: 100;
+    z-index: 100;
 }
 
 .sub {
