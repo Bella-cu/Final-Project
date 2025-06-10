@@ -37,7 +37,6 @@
         aside {
             border: 4px solid #ff92ad;
             width: 20vw;
-            margin-top: 10vw;
             text-align: center;
         }
 
@@ -67,26 +66,41 @@
             font-weight: 500;
         }
 
-        #menu aside {
-            border: 4px solid #000000;
-            width: 100%;
-            text-align: center;
-            display: grid;
-        }
-        #menu{
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-        }
-
-        #menu main {
+        #menu {
             display: flex;
-            flex-direction: column;
-        }
-        main > section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            flex-direction: row-reverse;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 5vw;
         }
 
+        #padding {
+            margin: 0;
+            padding: 5% 10%;
+        }
+
+        main:not(#header) {
+            background-color: #ebebeb;
+            height: min-content;
+            width: 45vw;
+            padding: 0 6% 2% 6%;
+        }
+
+        #listing p {
+            font-size: 1.5vw;
+            line-height: 5vw;
+            font-weight: 400;
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        #header {
+            background-color: #79d3de;
+            width: 45vw;
+            padding: 2% 6%
+        }
     </style>
 </head>
 
@@ -109,102 +123,104 @@
     <figure class="banner">
         <img src="Images.html/products-banner.png" alt="Menu Banner" />
     </figure>
-<div id="menu">
-    <main>
+    <div id="padding">
         <figure id="dogs">
             <img src="Images.html/glass-dog-img.png" />
         </figure>
+        <div id="menu">
+            <main>
+                <h2 id="header">Frozen Desserts</h2>
+                <section id="listing">
+                    <p><span>1 scoop</span> - $6.25</p>
+                    <p><span>2 scoops</span> - $9.25</p>
+                    <p><span>kids</span> - $3.75</p>
+                    <p><span>flights</span> - $12.50</p>
+                    <p><span>pint of ice cream</span> - $12.50</p>
+                </section>
+            </main>
+            <aside>
+                <div class="back-button">
+                    <h2>back to main</h2>
+                </div>
 
-        <section id="listing">
-            <p>1 scoop - $6.25</p>
-            <p>2 scoops - $9.25</p>
-            <p>kids - $3.75</p>
-            <p>flights - $12.50</p>
-            <p>pint of ice cream - $12.50</p>
-        </section>
-    </main>
-        <aside>
-            <div class="back-button">
-                <h2>back to main</h2>
-            </div>
+                <div class="section-title">
+                    <h2>frozen desserts</h2>
+                </div>
+                <div class="item">
+                    <h2>premium</h2>
+                </div>
+                <div class="item">
+                    <h2>soft serve</h2>
+                </div>
+                <div class="item">
+                    <h2>artisan cookie sandwich</h2>
+                </div>
+                <div class="item">
+                    <h2>sundaes</h2>
+                </div>
+                <div class="item">
+                    <h2>parfaits</h2>
+                </div>
+                <div class="item">
+                    <h2>milkshakes</h2>
+                </div>
+                <div class="item">
+                    <h2>specialty sundaes</h2>
+                </div>
+                <div class="item">
+                    <h2>twister</h2>
+                </div>
 
-            <div class="section-title">
-                <h2>frozen desserts</h2>
-            </div>
-            <div class="item">
-                <h2>premium</h2>
-            </div>
-            <div class="item">
-                <h2>soft serve</h2>
-            </div>
-            <div class="item">
-                <h2>artisan cookie sandwich</h2>
-            </div>
-            <div class="item">
-                <h2>sundaes</h2>
-            </div>
-            <div class="item">
-                <h2>parfaits</h2>
-            </div>
-            <div class="item">
-                <h2>milkshakes</h2>
-            </div>
-            <div class="item">
-                <h2>specialty sundaes</h2>
-            </div>
-            <div class="item">
-                <h2>twister</h2>
-            </div>
+                <div class="section-title">
+                    <h2>main dishes</h2>
+                </div>
+                <div class="item">
+                    <h2>premium</h2>
+                </div>
+                <div class="item">
+                    <h2>soft serve</h2>
+                </div>
+                <div class="item">
+                    <h2>artisan cookie sandwich</h2>
+                </div>
+                <div class="item">
+                    <h2>sundaes</h2>
+                </div>
+                <div class="item">
+                    <h2>parfaits</h2>
+                </div>
+                <div class="item">
+                    <h2>milkshakes</h2>
+                </div>
+                <div class="item">
+                    <h2>specialty sundaes</h2>
+                </div>
+                <div class="item">
+                    <h2>twister</h2>
+                </div>
 
-            <div class="section-title">
-                <h2>main dishes</h2>
-            </div>
-            <div class="item">
-                <h2>premium</h2>
-            </div>
-            <div class="item">
-                <h2>soft serve</h2>
-            </div>
-            <div class="item">
-                <h2>artisan cookie sandwich</h2>
-            </div>
-            <div class="item">
-                <h2>sundaes</h2>
-            </div>
-            <div class="item">
-                <h2>parfaits</h2>
-            </div>
-            <div class="item">
-                <h2>milkshakes</h2>
-            </div>
-            <div class="item">
-                <h2>specialty sundaes</h2>
-            </div>
-            <div class="item">
-                <h2>twister</h2>
-            </div>
+                <div class="section-title">
+                    <h2>specialties</h2>
+                </div>
+                <div class="item">
+                    <h2>gluten free</h2>
+                </div>
+                <div class="item">
+                    <h2>dairy free</h2>
+                </div>
+                <div class="item">
+                    <h2>sugar free</h2>
+                </div>
+                <div class="item">
+                    <h2>vegan</h2>
+                </div>
+                <div class="item">
+                    <h2>dog safe</h2>
+                </div>
 
-            <div class="section-title">
-                <h2>specialties</h2>
-            </div>
-            <div class="item">
-                <h2>gluten free</h2>
-            </div>
-            <div class="item">
-                <h2>dairy free</h2>
-            </div>
-            <div class="item">
-                <h2>sugar free</h2>
-            </div>
-            <div class="item">
-                <h2>vegan</h2>
-            </div>
-            <div class="item">
-                <h2>dog safe</h2>
-            </div>
-
-        </aside>
-</div>
+            </aside>
+        </div>
+    </div>
 
 
 
