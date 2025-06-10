@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>M
+        enu</title>
     <link rel="stylesheet" href="CSS/CSS.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
     <link
@@ -114,7 +115,8 @@
             font-weight: 700;
             font-size: 2vw;
         }
-        .products-img img{
+
+        .products-img img {
             margin-left: -5vw;
             margin-bottom: -1.9vw;
             padding: 0;
@@ -150,12 +152,12 @@
         <div id="menu">
             <main>
                 <figure class="dogs products-img">
-                <img src="Images.html/products-img.png">
+                    <img src="Images.html/products-img.png">
                 </figure>
             </main>
             <aside>
                 <div class="back-button">
-                    <h2>back to main</h2>
+                    <h2>Products</h2>
                 </div>
 
                 <div class="section-title">
@@ -167,22 +169,22 @@
                 <div class="item" data-content="softServe">
                     <h2>soft serve</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="cookie">
                     <h2>artisan cookie sandwich</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="sundaes">
                     <h2>sundaes</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="parfaits">
                     <h2>parfaits</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="milkshakes">
                     <h2>milkshakes</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="specialSundae">
                     <h2>specialty sundaes</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="twister">
                     <h2>twister</h2>
                 </div>
 
@@ -190,30 +192,20 @@
                     <h2>main dishes</h2>
                 </div>
                 <div class="item">
-                    <h2>premium</h2>
+                    <h2>salads</h2>
                 </div>
                 <div class="item">
-                    <h2>soft serve</h2>
+                    <h2>sandwiches</h2>
                 </div>
                 <div class="item">
-                    <h2>artisan cookie sandwich</h2>
+                    <h2>Hot dogs</h2>
                 </div>
                 <div class="item">
-                    <h2>sundaes</h2>
+                    <h2>Pastries</h2>
                 </div>
                 <div class="item">
-                    <h2>parfaits</h2>
+                    <h2>Milkshakes</h2>
                 </div>
-                <div class="item">
-                    <h2>milkshakes</h2>
-                </div>
-                <div class="item">
-                    <h2>specialty sundaes</h2>
-                </div>
-                <div class="item">
-                    <h2>twister</h2>
-                </div>
-
                 <div class="section-title">
                     <h2>specialties</h2>
                 </div>
@@ -232,7 +224,9 @@
                 <div class="item">
                     <h2>dog safe</h2>
                 </div>
-
+                <div class="back-button">
+                    <h2>back to main</h2>
+                </div>
             </aside>
         </div>
     </div>
@@ -277,35 +271,118 @@
 </footer>
 <script>
     const menuContent = {
-        softServe: `
-    <h2 id="header">Soft Serve</h2>
-                <section id="listing">
-                    <p><span>1 scoop</span> - $6.25</p>
-                    <p><span>2 scoops</span> - $9.25</p>
-                    <p><span>kids</span> - $3.75</p>
-                    <p><span>flights</span> - $12.50</p>
-                    <p><span>pint of ice cream</span> - $12.50</p>
-                </section>
-    `,
         premium: `
-    <h2 id="header">Premium</h2>
-                <section id="listing">
-                    <p><span>1 scoop</span> - $6.25</p>
-                    <p><span>2 scoops</span> - $9.25</p>
-                    <p><span>kids</span> - $3.75</p>
-                    <p><span>flights</span> - $12.50</p>
-                    <p><span>pint of ice cream</span> - $12.50</p>
-                </section>
+        <h2 id="header">Premium Ice Cream</h2>
+        <section id="listing">
+            <p><span>1 scoop</span> - $6.25</p>
+            <p><span>2 scoops</span> - $9.25</p>
+            <p><span>Kids</span> - $3.75</p>
+            <p><span>Flights</span> - $12.50</p>
+            <p><span>Pint</span> - $12.50</p>
+        </section>
+    `,
+        softServe: `
+        <h2 id="header">Soft Serve</h2>
+        <section id="listing">
+            <p><span><i>Vanilla, Chocolate, & Twist</i></span></p>
+            <p><span>Kids</span> - $3.50</p>
+            <p><span>Small</span> - $4.00</p>
+            <p><span>Medium</span> - $4.50</p>
+            <p><span>Large</span> - $5.50</p>
+            <p><span><b>Extras</b></span></p>
+            <p><span>Peanuts</span> - $0.25</p>
+            <p><span>Chocolate Sprinkles</span> - $0.25</p>
+            <p><span>Rainbow Sprinkles</span> - $0.25</p>
+            <p><span><b>Cone Dip</b></span></p>
+            <p><span>Chocolate</span> - $0.75</p>
+            <p><span>Birthday Cake Confetti</span> - $0.75</p>
+            <p><span>Toasted Coconut</span> - $0.75</p>
+        </section>
+    `,
+        cookie: `
+        <h2 id="header">Artisan Cookie Sandwich</h2>
+        <section id="listing">
+            <p><span>Fog & Oats</span> - $8.75<br><i>London Fog Ice Cream & Triple Oatmeal Cookie</i></p>
+            <p><span>Cookie Monster</span> - $8.75<br><i>Cookie Monster Ice Cream & Chocolate Cookie</i></p>
+            <p><span>Triple Chocolate Hazelnut</span> - $8.75<br><i>Milk chocolate, dark chocolate and cocoa nibs cookie with a hazelnut ice cream middle</i></p>
+            <p><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With Vegan Double Chocolate Cookies</i></p>
+            <p><span>Brown Butter Milk Chocolate Chip Cookie GF</span> - $8.75<br><i>With Vanilla Ice Cream</i></p>
+        </section>
+    `,
+        specialSundae: `
+        <h2 id="header">Specialty Sundaes</h2>
+        <section id="listing">
+            <p><span>Dashing Dug</span> - $11.00</p>
+            <p><span>Bad Betty</span> - $11.00</p>
+        </section>
+    `,
+        parfaits: `
+        <h2 id="header">Parfaits</h2>
+        <section id="listing">
+            <p><span>Nutella®, Kit Kat® & Crushed Hazelnuts</span> - $7.50</p>
+            <p><span>Cherries, Hot Fudge & Oreo</span> - $7.50</p>
+            <p><span>Pineapple, Coconut, & Graham Crumb</span> - $7.50</p>
+            <p><span>Peanut Butter, Butterscotch, Marshmallows</span> - $7.50</p>
+            <p><span>Banana, Nutella®, Peanut Butter</span> - $7.50</p>
+            <p><span>Hot Fudge, Marshmallows & Graham Crumb</span> - $7.50</p>
+            <p><span>Hot Fudge, Peanut Butter & Spanish Peanuts</span> - $7.50</p>
+        </section>
+    `,
+        milkshakes: `
+        <h2 id="header">Milkshakes</h2>
+        <section id="listing">
+            <p><span>Chocolate</span> - $7.25</p>
+            <p><span>Strawberry</span> - $7.25</p>
+            <p><span>Blueberry</span> - $7.25</p>
+            <p><span>Apple</span> - $7.25</p>
+            <p><span>Caramel</span> - $7.25</p>
+            <p><span>Pineapple</span> - $7.25</p>
+            <p><span>Nutella®</span> - $7.25</p>
+            <p><span>Root Beer</span> - $7.25</p>
+            <p><span>Bubble Gum</span> - $7.25</p>
+            <p><span>Peanut Butter</span> - $7.25</p>
+            <p><span>Banana</span> - $7.25</p>
+            <p><span>Coconut</span> - $7.25</p>
+            <p><span>Cherry</span> - $7.25</p>
+            <p><span>Vanilla</span> - $7.25</p>
+            <p><span>Skor®</span> - $7.25</p>
+            <p><span>Oreo®</span> - $7.25</p>
+        </section>
+    `,
+        sundaes: `
+        <h2 id="header">Sundaes</h2>
+        <section id="listing">
+            <p><span>Small</span> - $6.75</p>
+            <p><span>Large</span> - $8.25</p>
+            <p><span><b>Toppings:</b></span></p>
+            <p><span>Hot Fudge</span></p>
+            <p><span>Strawberry</span></p>
+            <p><span>Butterscotch</span></p>
+            <p><span>Blueberry</span></p>
+            <p><span>Apple</span></p>
+            <p><span>Caramel</span></p>
+            <p><span>Cherry</span></p>
+            <p><span>Pineapple</span></p>
+        </section>
     `
     };
 
+    // Selects 'item' inside the <aside> element
     const items = document.querySelectorAll('aside .item');
+
+    // Selects
+    //  the <main> element where content will be displayed
     const main = document.querySelector('main');
 
+    // Loop through each item in the sidebar
     items.forEach(item => {
+        // Add a click event listener to each item
         item.addEventListener('click', () => {
+            // Get the value of the 'data-content' attribute for the clicked item
             const contentKey = item.getAttribute('data-content');
+            // If there is content for this key in the menuContent object
             if (menuContent[contentKey]) {
+                // Update the main area with the corresponding content
                 main.innerHTML = menuContent[contentKey];
             }
         });
