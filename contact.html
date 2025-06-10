@@ -31,11 +31,7 @@
 
         #h1-border {
             margin: 0 0 4vw 0;
-            border-bottom: 5px solid;
-            /*the border */
-            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
-            border-image-slice: 1;
-            /* ensures the whole gradient is used */
+            border-bottom: 5px solid #ff92ad;
         }
 
         .contact {
@@ -45,24 +41,17 @@
             /* Two equal columns */
             gap: 5%;
             /* Space between columns */
-            overflow: hidden;
         }
 
         .background {
             background-color: #f7d3db;
             padding: 3vw;
-            border: 5px solid;
-            /*the border */
-            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
-            border-image-slice: 1;
-            /* ensures the whole gradient is used */
+            border: 5px solid #ff92ad;
         }
 
         .contact img {
             width: 100%;
             /* Image fills the grid cell */
-            border: none;
-            /* No border for a clean look */
             background-color: #f0f0f0;
             /* Light background for alt text and img */
             color: #0a0530;
@@ -78,11 +67,7 @@
             flex-direction: column;
             /* Stack vertically */
             background-color: #eafbff;
-            border: 5px solid;
-            /*the border */
-            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
-            border-image-slice: 1;
-            /* ensures the whole gradient is used */
+            border: 5px solid #ff92ad;
             padding: 1vw;
         }
 
@@ -100,6 +85,7 @@
         #contact-p {
             text-align: center;
             font-size: 1.5vw;
+            padding: 3vw;
         }
 
         input,
@@ -116,6 +102,10 @@
             /* Readable font size */
             resize: vertical;
             /* Allow vertical resizing only for textarea */
+        }
+
+        #border {
+            border: 5px solid #ff92ad;
         }
 
 
@@ -257,7 +247,7 @@
                     <!-- Sends the user to thank you page -->
                     <button type="submit">Submit</button>
                 </form>
-                <div>
+                <div id="border">
                     <!-- Dug & Betty's Logo -->
                     <img src="Images.html/logoup.png" alt="Dug and Betty’s Logo" />
                     <p id="contact-p">309 Des Meurons Street<br>

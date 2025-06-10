@@ -20,7 +20,7 @@
             opacity: 25%;
         }
 
-        #dogs img {
+        .dogs img {
             width: 100%;
             border: 3px solid #d1cab5;
         }
@@ -49,7 +49,11 @@
             border: 4px solid#ff92ad;
             background-color: #eafbff;
             padding: 1vw;
+        }
 
+        .item:hover {
+            cursor: pointer;
+            background-color: #f7d3db;
         }
 
         .section-title {
@@ -79,11 +83,13 @@
             padding: 5% 10%;
         }
 
-        main:not(#header) {
-            background-color: #ebebeb;
+        main {
+            background-color: #f7d3dba9;
             height: min-content;
             width: 45vw;
             padding: 0 6% 2% 6%;
+            border: 5px solid #ff92ad;
+            overflow: hidden;
         }
 
         #listing p {
@@ -98,8 +104,22 @@
 
         #header {
             background-color: #79d3de;
-            width: 45vw;
-            padding: 2% 6%
+            width: 49vw;
+            padding: 2% 6%;
+            margin: 2% -1% 3% -5.1vw;
+            border: 5px solid #ff92ad;
+        }
+
+        #header {
+            font-weight: 700;
+            font-size: 2vw;
+        }
+        .products-img img{
+            margin-left: -5vw;
+            margin-bottom: -1.9vw;
+            padding: 0;
+            border: none;
+            width: 55vw;
         }
     </style>
 </head>
@@ -124,19 +144,14 @@
         <img src="Images.html/products-banner.png" alt="Menu Banner" />
     </figure>
     <div id="padding">
-        <figure id="dogs">
+        <figure class="dogs">
             <img src="Images.html/glass-dog-img.png" />
         </figure>
         <div id="menu">
             <main>
-                <h2 id="header">Frozen Desserts</h2>
-                <section id="listing">
-                    <p><span>1 scoop</span> - $6.25</p>
-                    <p><span>2 scoops</span> - $9.25</p>
-                    <p><span>kids</span> - $3.75</p>
-                    <p><span>flights</span> - $12.50</p>
-                    <p><span>pint of ice cream</span> - $12.50</p>
-                </section>
+                <figure class="dogs products-img">
+                <img src="Images.html/products-img.png">
+                </figure>
             </main>
             <aside>
                 <div class="back-button">
@@ -146,10 +161,10 @@
                 <div class="section-title">
                     <h2>frozen desserts</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="premium">
                     <h2>premium</h2>
                 </div>
-                <div class="item">
+                <div class="item" data-content="softServe">
                     <h2>soft serve</h2>
                 </div>
                 <div class="item">
@@ -221,9 +236,6 @@
             </aside>
         </div>
     </div>
-
-
-
 </body>
 <footer>
     <div class="footer-container">
@@ -263,6 +275,43 @@
     </div>
     <p class="copyright">© Dug & Betty’s 2025</p>
 </footer>
+<script>
+    const menuContent = {
+        softServe: `
+    <h2 id="header">Soft Serve</h2>
+                <section id="listing">
+                    <p><span>1 scoop</span> - $6.25</p>
+                    <p><span>2 scoops</span> - $9.25</p>
+                    <p><span>kids</span> - $3.75</p>
+                    <p><span>flights</span> - $12.50</p>
+                    <p><span>pint of ice cream</span> - $12.50</p>
+                </section>
+    `,
+        premium: `
+    <h2 id="header">Premium</h2>
+                <section id="listing">
+                    <p><span>1 scoop</span> - $6.25</p>
+                    <p><span>2 scoops</span> - $9.25</p>
+                    <p><span>kids</span> - $3.75</p>
+                    <p><span>flights</span> - $12.50</p>
+                    <p><span>pint of ice cream</span> - $12.50</p>
+                </section>
+    `
+    };
+
+    const items = document.querySelectorAll('aside .item');
+    const main = document.querySelector('main');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const contentKey = item.getAttribute('data-content');
+            if (menuContent[contentKey]) {
+                main.innerHTML = menuContent[contentKey];
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>
