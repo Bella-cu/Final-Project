@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dugandbettys</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+
+    <style>
+        main {
+            margin: 0%;
+            padding: 5%;
+            overflow: hidden;
+            /* Prevents scrollbars from overflowing content */
+        }
+
+        #contact-h1 {
+            margin: 0 0 1vw 0;
+            padding-top: 1vw;
+            font-size: 6vw;
+            font-weight: 100;
+            width: 100%;
+            text-align: center;
+        }
+
+        #h1-border {
+            margin: 0 0 4vw 0;
+            border-bottom: 5px solid;
+            /*the border */
+            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
+            border-image-slice: 1;
+            /* ensures the whole gradient is used */
+        }
+
+        .contact {
+            display: grid;
+            /* Enables grid layout */
+            grid-template-columns: repeat(2, 1fr);
+            /* Two equal columns */
+            gap: 5%;
+            /* Space between columns */
+            overflow: hidden;
+        }
+
+        .background {
+            background-color: #ff92ad;
+            padding: 3vw;
+            border: 5px solid;
+            /*the border */
+            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
+            border-image-slice: 1;
+            /* ensures the whole gradient is used */
+        }
+
+        .contact img {
+            width: 100%;
+            /* Image fills the grid cell */
+            border: none;
+            /* No border for a clean look */
+            background-color: #f0f0f0;
+            /* Light background for alt text and img */
+            color: #0a0530;
+            /* color for alt text*/
+            font-size: 2rem;
+            /*font size for alt text */
+        }
+
+
+        form {
+            display: flex;
+            /* Flexbox layout */
+            flex-direction: column;
+            /* Stack vertically */
+            background-color: #eafbff;
+            border: 5px solid;
+            /*the border */
+            border-image: linear-gradient(135deg, #9be1e9, #ffd4e2);
+            border-image-slice: 1;
+            /* ensures the whole gradient is used */
+            padding: 1vw;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            /* Space above and below labels */
+            color: #2a2a2a;
+            font-family: 'bebas-neue', sans-serif;
+            font-size: 1vw;
+            text-transform: uppercase;
+            transform: scaleY(1.2);
+            font-weight: bold;
+        }
+
+        #contact-p {
+            text-align: center;
+            font-size: 1.5vw;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            /* space for typing area */
+            border: 1px solid #ddd;
+            /* Light border for clarity */
+            border-radius: 5px;
+            /* Rounded corners for modern look */
+            margin-bottom: 15px;
+            /* Space below each field */
+            font-size: 16px;
+            /* Readable font size */
+            resize: vertical;
+            /* Allow vertical resizing only for textarea */
+        }
+
+
+        button {
+            background-color: #79d3de;
+            color: rgb(0, 0, 0);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1vw, 3vw, 4vw);
+            font-weight: 100;
+            border: none;
+            padding: 1% 20%;
+            cursor: pointer;
+            transition: .5s linear;
+            width: fit-content;
+            margin: auto;
+            transform: scale(0.9);
+            border: 4px solid #ff89a4;
+        }
+
+        button:hover {
+            background-color: #ff89a4;
+            border: 4px solid #79d3de;
+            transform: scale(1);
+            color: #000000;
+        }
+
+        #message {
+            min-height: 100px;
+            /* Minimum height for textarea  so it is comfortable to write in*/
+        }
+
+        .stars {
+            font-size: 4vw;
+            /* Large stars for easy clicking */
+            margin: -2% 0 3% 0;
+            /* Space above and below stars */
+            padding-left: 1%;
+        }
+
+        .star {
+            cursor: pointer;
+            /* Pointer cursor for interactivity */
+            margin-right: 2%;
+            /* Space between stars */
+            color: #959494;
+            /* Default star color before clicked*/
+            transition: color 0.3s ease, transform 0.2s ease;
+            /* Smooth transition */
+        }
+
+        /*Highlights the star on hover for feedback. */
+        .star:hover {
+            transform: scale(1.2);
+            /* Enlarges star on hover */
+            color: gold;
+            /* Gold color on hover */
+        }
+
+        .star:focus {
+            transform: scale(1.2);
+            /* Enlarges star on hover */
+            color: gold;
+            /* Gold color on hover */
+        }
+
+        /* Highlights selected stars in gold */
+        .star.selected {
+            color: gold;
+            /* Gold color for selected stars */
+            animation: pop 0.3s ease;
+            /* Pop animation */
+        }
+
+        /* Animation for the star selection effect. */
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav1">
+            <figure class="social-nav">
+                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
+                    <img src="Images.html/instagram_2111463.png" /></a>
+                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
+                    <img src="Images.html/facebook_1384053.png" /></a>
+            </figure>
+        </div>
+    </header>
+    <main>
+        <div class="background">
+            <div id="h1-border">
+                <h1 id="contact-h1">Leave Us A Review</h1>
+            </div>
+            <div class="contact">
+                <!-- Contact form for user feedback and questions -->
+                <form class="form" action="thankyou.html" method="GET">
+                    <!-- Collects the user's full name for personalized responses. -->
+                    <label for="name">Full Name</label>
+                    <input tabindex="0" type="text" name="fullname" id="name" placeholder="What's your full name?"
+                        required aria-label="Full Name" />
+
+                    <!-- Allows me to contact the user with a reply. -->
+                    <label for="email">Email address</label>
+                    <input tabindex="0" type="email" id="email" name="email" placeholder="you@example.com" required
+                        aria-label="Email Address" />
+
+                    <label for="email">Phone Number</label>
+                    <input tabindex="0" type="phone" id="phone" name="phone" placeholder="123 456 789" required
+                        aria-label="Phone Number" />
+                    <!--Users can write questions, comments, or suggestions here. -->
+                    <label for="feedback">Feedback</label>
+                    <textarea tabindex="0" id="message" name="feedback" placeholder="Write feedback and questions here"
+                        required aria-label="Feedback"></textarea>
+
+                    <!-- Lets users rate their experience from 1 to 5 stars. Each star is clickable and accessible. -->
+                    <label for="star">Rate your experience</label>
+                    <div class="stars" id="rating-stars" aria-label="Star rating from 1 to 5">
+                        <!-- Each star represents a rating value. -->
+                        <span tabindex="0" class="star" data-value="1" aria-label="1 star">&#9733;</span>
+                        <span tabindex="0" class="star" data-value="2" aria-label="2 stars">&#9733;</span>
+                        <span tabindex="0" class="star" data-value="3" aria-label="3 stars">&#9733;</span>
+                        <span tabindex="0" class="star" data-value="4" aria-label="4 stars">&#9733;</span>
+                        <span tabindex="0" class="star" data-value="5" aria-label="5 stars">&#9733;</span>
+                    </div>
+
+                    <!-- Sends the user to thank you page -->
+                    <button type="submit">Submit</button>
+                </form>
+                <div>
+                    <!-- Dug & Betty's Logo -->
+                    <img src="Images.html/logoup.png" alt="Dug and Betty’s Logo" />
+                    <p id="contact-p">309 Des Meurons Street<br>
+                        Winnipeg, Manitoba, Canada R2H 2N4 <br>
+                        204-417-0026</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                <p>309 Des Meurons Street<br>
+                    Winnipeg, Manitoba, Canada R2H 2N4<br>
+                    204-417-0026</p>
+            </div>
+
+            <div class="footer-middle">
+                <div class="nav">
+                    <a href="index.html">Home</a> |
+                    <a href="menu.html">Menu</a> |
+                    <a href="Products.html">All Items</a> |
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <div class="social-icons">
+                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Hours of Operation</h3>
+                <p>
+                    Monday Closed<br>
+                    Tuesday 11:00am - 8:00pm<br>
+                    Wednesday 11:00am - 8:00pm<br>
+                    Thursday 11:00am - 8:00pm<br>
+                    Friday 11:00am - 8:00pm<br>
+                    Saturday 11:00am - 8:00pm<br>
+                    Sunday 11:00am - 8:00pm
+                </p>
+            </div>
+        </div>
+        <p class="copyright">© Dug & Betty’s 2025</p>
+    </footer>
+    <script>
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            // Handle mouse click
+            star.addEventListener('click', selectStar);
+
+            // Handle keyboard events (Enter or Space)
+            star.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); // Prevent page scroll on spacebar
+                    selectStar.call(star);
+                }
+            });
+        });
+
+        function selectStar() {
+            const value = parseInt(this.getAttribute('data-value'));
+
+            // Remove 'selected' from all stars
+            stars.forEach(s => s.classList.remove('selected'));
+
+            // Add 'selected' to stars up to and including the clicked one
+            for (let i = 0; i < value; i++) {
+                stars[i].classList.add('selected');
+            }
+        }
+    </script>
+</body>
+
+</html>

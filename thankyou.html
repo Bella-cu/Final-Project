@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dugandbettys</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <style>
+        main {
+            display: flex;
+            /* Use flexbox for layout */
+            flex-direction: column;
+            /* Stack vertically */
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            text-align: center;
+            /* Center text inside main */
+            padding: 5%;
+            margin: 5%;
+            background-color: #f7d3db;
+        }
+
+        /* Envelope icon: visually represents successful form submission */
+        #icon {
+            width: 15%;
+            /* Responsive width for icon */
+            max-width: 250px;
+            /* Prevent icon from getting too large */
+            border: none;
+            /* Removes any default border */
+        }
+
+        #button {
+            background-color: #eafbff;
+            border: 5px solid #88cad1;
+            text-align: center;
+            width: max-content;
+            color: rgb(0, 0, 0);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1vw, 3vw, 4vw);
+            font-weight: 100;
+            padding: 1% 3%;
+            cursor: pointer;
+            transition: .5s linear;
+        }
+
+        #button:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-weight: 400;
+            color: #7ad0e2;
+            padding-bottom: 3%;
+        }
+        h2{
+            padding-bottom: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav1">
+            <figure class="social-nav">
+                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
+                    <img src="Images.html/instagram_2111463.png" /></a>
+                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
+                    <img src="Images.html/facebook_1384053.png" /></a>
+            </figure>
+        </div>
+    </header>
+
+    <!-- Confirm message and return button -->
+    <main tabindex="0">
+        <!-- Thanks for user feedback -->
+        <h1 tabindex="0">Thanks <span style="color: white;">for</span> <span style="color: #ff87a3;">Submitting!</span>
+        </h1>
+
+        <!-- Confirmation of successful message delivery -->
+        <h2 tabindex="0">Your message has been sent successfully.</h2>
+
+        <!-- Button to return to homepage, wrapped in a link -->
+        <a href="index.html" aria-label="Return to homepage">
+            <button type="button" id="button">Return to Homepage</button>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                <p>309 Des Meurons Street<br>
+                    Winnipeg, Manitoba, Canada R2H 2N4<br>
+                    204-417-0026</p>
+            </div>
+
+            <div class="footer-middle">
+                <div class="nav">
+                    <a href="index.html">Home</a> |
+                    <a href="menu.html">Menu</a> |
+                    <a href="Products.html">All Items</a> |
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <div class="social-icons">
+                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Hours of Operation</h3>
+                <p>
+                    Monday Closed<br>
+                    Tuesday 11:00am - 8:00pm<br>
+                    Wednesday 11:00am - 8:00pm<br>
+                    Thursday 11:00am - 8:00pm<br>
+                    Friday 11:00am - 8:00pm<br>
+                    Saturday 11:00am - 8:00pm<br>
+                    Sunday 11:00am - 8:00pm
+                </p>
+            </div>
+        </div>
+        <p class="copyright">© Dug & Betty’s 2025</p>
+    </footer>
+</body>
+
+</html>

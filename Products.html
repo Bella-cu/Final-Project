@@ -1,11 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <style>
+        .overlay {
+            opacity: 30%;
+        }
+
+        .gradient {
+            opacity: 25%;
+        }
+
+        #dogs img {
+            width: 100%;
+            border: 3px solid #d1cab5;
+        }
+
+        .back-button {
+            background-color: #79d3de;
+        }
+
+        .back-button h2 {
+            font-size: 2vw;
+            font-weight: 700;
+        }
+
+        aside {
+            border: 4px solid #ff92ad;
+            width: 20vw;
+            margin-top: 10vw;
+            text-align: center;
+        }
+
+        aside>div {
+            padding: 5% 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            border: 4px solid#ff92ad;
+            background-color: #eafbff;
+            padding: 1vw;
+
+        }
+
+        .section-title {
+            background-color: #ff92ad;
+            border: 4px solid #ec869f;
+        }
+
+        .section-title h2 {
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1vw;
+            font-weight: 500;
+        }
+
+        #menu aside {
+            border: 4px solid #000000;
+            width: 100%;
+            text-align: center;
+            display: grid;
+        }
+        #menu{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        #menu main {
+            display: flex;
+            flex-direction: column;
+        }
+        main > section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="nav1">
+            <figure class="social-nav">
+                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
+                    <img src="Images.html/instagram_2111463.png" /></a>
+                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
+                    <img src="Images.html/facebook_1384053.png" /></a>
+            </figure>
+        </div>
+        <div class="cover">
+            <img src="Images.html/products.png" alt="Responsive Image" />
+            <div class="gradient"></div>
+            <div class="overlay"></div>
+        </div>
+    </header>
+    <figure class="banner">
+        <img src="Images.html/products-banner.png" alt="Menu Banner" />
+    </figure>
+<div id="menu">
+    <main>
+        <figure id="dogs">
+            <img src="Images.html/glass-dog-img.png" />
+        </figure>
+
+        <section id="listing">
+            <p>1 scoop - $6.25</p>
+            <p>2 scoops - $9.25</p>
+            <p>kids - $3.75</p>
+            <p>flights - $12.50</p>
+            <p>pint of ice cream - $12.50</p>
+        </section>
+    </main>
+        <aside>
+            <div class="back-button">
+                <h2>back to main</h2>
+            </div>
+
+            <div class="section-title">
+                <h2>frozen desserts</h2>
+            </div>
+            <div class="item">
+                <h2>premium</h2>
+            </div>
+            <div class="item">
+                <h2>soft serve</h2>
+            </div>
+            <div class="item">
+                <h2>artisan cookie sandwich</h2>
+            </div>
+            <div class="item">
+                <h2>sundaes</h2>
+            </div>
+            <div class="item">
+                <h2>parfaits</h2>
+            </div>
+            <div class="item">
+                <h2>milkshakes</h2>
+            </div>
+            <div class="item">
+                <h2>specialty sundaes</h2>
+            </div>
+            <div class="item">
+                <h2>twister</h2>
+            </div>
+
+            <div class="section-title">
+                <h2>main dishes</h2>
+            </div>
+            <div class="item">
+                <h2>premium</h2>
+            </div>
+            <div class="item">
+                <h2>soft serve</h2>
+            </div>
+            <div class="item">
+                <h2>artisan cookie sandwich</h2>
+            </div>
+            <div class="item">
+                <h2>sundaes</h2>
+            </div>
+            <div class="item">
+                <h2>parfaits</h2>
+            </div>
+            <div class="item">
+                <h2>milkshakes</h2>
+            </div>
+            <div class="item">
+                <h2>specialty sundaes</h2>
+            </div>
+            <div class="item">
+                <h2>twister</h2>
+            </div>
+
+            <div class="section-title">
+                <h2>specialties</h2>
+            </div>
+            <div class="item">
+                <h2>gluten free</h2>
+            </div>
+            <div class="item">
+                <h2>dairy free</h2>
+            </div>
+            <div class="item">
+                <h2>sugar free</h2>
+            </div>
+            <div class="item">
+                <h2>vegan</h2>
+            </div>
+            <div class="item">
+                <h2>dog safe</h2>
+            </div>
+
+        </aside>
+</div>
+
+
+
 </body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+            <p>309 Des Meurons Street<br>
+                Winnipeg, Manitoba, Canada R2H 2N4<br>
+                204-417-0026</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="nav">
+                <a href="index.html">Home</a> |
+                <a href="menu.html">Menu</a> |
+                <a href="Products.html">All Items</a> |
+                <a href="contact.html">Contact</a>
+            </div>
+            <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+            <div class="social-icons">
+                <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h3>Hours of Operation</h3>
+            <p>
+                Monday Closed<br>
+                Tuesday 11:00am - 8:00pm<br>
+                Wednesday 11:00am - 8:00pm<br>
+                Thursday 11:00am - 8:00pm<br>
+                Friday 11:00am - 8:00pm<br>
+                Saturday 11:00am - 8:00pm<br>
+                Sunday 11:00am - 8:00pm
+            </p>
+        </div>
+    </div>
+    <p class="copyright">© Dug & Betty’s 2025</p>
+</footer>
+</body>
+
 </html>

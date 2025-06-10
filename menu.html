@@ -12,27 +12,16 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
     <style>
-        .title {
-            position: absolute;
-            color: whitesmoke;
-            text-shadow:
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000000;
-            background-color: #0000005a;
-            box-shadow: 0 0 6vw #ff87a3a8;
-            padding: .5vw 50%;
-            border-radius: 10px;
+        figure {
+            position: relative;
         }
 
-figure {
-    position: relative;
-}
-
-
         .overlay {
-            opacity: 70%;
+            opacity: 30%;
+        }
+
+        .gradient {
+            opacity: 25%;
         }
 
         .cover {
@@ -41,7 +30,7 @@ figure {
             display: flex;
         }
 
-        #frozen-desserts figure {
+        .frozen-desserts figure {
             text-align: center;
             width: 20%;
             display: flex;
@@ -59,7 +48,7 @@ figure {
             overflow: hidden;
         }
 
-        #frozen-desserts figcaption {
+        .frozen-desserts figcaption {
             opacity: 1;
         }
 
@@ -67,7 +56,7 @@ figure {
             height: fit-content;
         }
 
-        #frozen-desserts img {
+        .frozen-desserts img {
             width: 100%;
             height: auto;
             display: block;
@@ -77,7 +66,7 @@ figure {
             width: 100%
         }
 
-        #frozen-desserts {
+        .frozen-desserts {
             display: flex;
             justify-content: space-between;
             flex-wrap: nowrap;
@@ -136,11 +125,9 @@ figure {
             </figure>
         </div>
         <div class="cover">
-            <img src="Images.html/Cover2.png" alt="Responsive Image" />
+            <img src="Images.html/menu.png" alt="Responsive Image" />
             <div class="gradient"></div>
             <div class="overlay"></div>
-            <h1 class="title">Menu
-            </h1>
         </div>
     </header>
     <figure class="banner">
@@ -149,27 +136,31 @@ figure {
     <main>
         <section class="menu-4 menu-view">
             <h2>Frozen Desserts</h2>
-            <div id="frozen-desserts">
+            <div class="frozen-desserts">
                 <figure class="pink">
-                    <img src="Images.html/pint.png"><h4>View More</h4>
+                    <img src="Images.html/pint.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/soft.png"><h4>View More</h4>
+                    <img src="Images.html/soft.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="pink">
-                    <img src="Images.html/cookie.png"><h4>View More</h4>
+                    <img src="Images.html/cookie.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/cones.png"><h4>View More</h4>
+                    <img src="Images.html/cones.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
@@ -180,37 +171,43 @@ figure {
             <h2>Dishes</h2>
             <div id="dishes">
                 <figure class="pink">
-                    <img src="Images.html/salad.png"><h4>View More</h4>
+                    <img src="Images.html/salad.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/sandwich.png"><h4>View More</h4>
+                    <img src="Images.html/sandwich.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="pink">
-                    <img src="Images.html/hot.png"><h4>View More</h4>
+                    <img src="Images.html/hot.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/pastry.png"><h4>View More</h4>
+                    <img src="Images.html/pastry.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="pink">
-                    <img src="Images.html/shake.png"><h4>View More</h4>
+                    <img src="Images.html/shake.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/drink.png"><h4>View More</h4>
+                    <img src="Images.html/drink.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Pints
                     </figcaption>
@@ -219,27 +216,31 @@ figure {
         </section>
         <section class="menu-4 menu-view">
             <h2>Specialties</h2>
-            <div id="frozen-desserts">
+            <div class="frozen-desserts">
                 <figure class="pink">
-                    <img src="Images.html/vegan.png"><h4>View More</h4>
+                    <img src="Images.html/vegan.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Vegan
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/dairy.png"><h4>View More</h4>
+                    <img src="Images.html/dairy.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Dairy Free
                     </figcaption>
                 </figure>
                 <figure class="pink">
-                    <img src="Images.html/dog.png"><h4>View More</h4>
+                    <img src="Images.html/dog.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Dog Safe
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/gluten-free.png"><h4>View More</h4>
+                    <img src="Images.html/gluten-free.png">
+                    <h4>View More</h4>
                     <figcaption>
                         Gluten Free
                     </figcaption>
@@ -260,8 +261,8 @@ figure {
                 <div class="nav">
                     <a href="index.html">Home</a> |
                     <a href="menu.html">Menu</a> |
-                    <a href="#">All Items</a> |
-                    <a href="#">Contact</a>
+                    <a href="Products.html">All Items</a> |
+                    <a href="contact.html">Contact</a>
                 </div>
                 <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
                 <div class="social-icons">
