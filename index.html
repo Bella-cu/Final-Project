@@ -225,176 +225,202 @@
     </ul>
     </div>
     </nav>
-
-    <nav>
-        <figure id="move" class="dropbtn" onclick="drop()">
-            <a><img src="Images.html/menu-icon.png" alt="Menu Icon"></a>
-        </figure>
-
-        <div class="content" id="dropdwn">
-            <a href="index.html">Home</a>
-            <a href="index.html">Menu</a>
-            <a href="index.html">All Items</a>
-            <a href="index.html">Contact</a>
-        </div>
-
-        <figure>
-            <a><img src="Images.html/facebook_1384053.png" alt="Facebook"></a>
-        </figure>
-        <figure>
-            <a><img src="Images.html/instagram_2111463.png" alt="Instagram"></a>
-        </figure>
-    </nav>
-    <header>
-        <div class="cover">
-            <img src="Images.html/Cover.png" alt="Responsive Image" />
-            <div class="gradient"></div>
-            <div class="overlay"></div>
-            <img id="logo" src="Images.html/logo.png" />
-            <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
-            </h1>
-            <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
-        </div>
-    </header>
-    <figure class="banner">
-        <img src="Images.html/freepik__adjust__78665.png">
-    </figure>
-    <main>
-        <div id="menu-section">
-            <div id="menu">
-                <div class="menu-wrapper">
-                    <img id="slide">
-                    <div class="image-overlay"></div>
-                </div>
-                <button onclick="window.location.href='menu.html'">Menu</button>
+    <nav class="navigation">
+        <!-- Navigation bar at the top of the page -->
+        <div class="dropdwn">
+            <!-- Dropdown button for additional links -->
+            <button tabindex="0" id="dropdwn-img" onclick="myFunction()" aria-controls="dropdwn-content">
+                <img src="images.html/menu-icon1.png"
+                    alt="Icon for more Information" /></button><!-- Dropdown content with links -->
+            <div id="dropdwn-content" class="dropdwn-content">
+                <a tabindex="0" id="home" href="index.html" alt="Takes user to the home page within the website">Home</a>
+                <a tabindex="0" href="menu.html" alt="Takes user to the menu page">Menu</a>
+                <a tabindex="0" href="Products.html" alt="Takes user to the All products page">All Products</a>
+                <a tabindex="0" href="contact.html" alt="Takes user to the contact page">Contact</a>
             </div>
         </div>
+        <script>
+            /*(The function taht is being refered) toggles between showing the content when clicked*/
+            function myFunction() {
+                document.getElementById('dropdwn-content').classList.toggle('show');
+            }
+        </script>
+        <nav>
+            <figure id="move" class="dropbtn">
+                <img src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
+            </figure>
 
-        <section class="menu-4 menu-view">
-            <h2>Specialties</h2>
-            <div class="frozen-desserts">
-                <figure class="pink">
-                    <img src="Images.html/vegan.png">
-                    <h4>View More</h4>
-                    <figcaption>
-                        Vegan
-                    </figcaption>
-                </figure>
-                <figure class="blue">
-                    <img src="Images.html/dairy.png">
-                    <h4>View More</h4>
-                    <figcaption>
-                        Dairy Free
-                    </figcaption>
-                </figure>
-                <figure class="pink">
-                    <img src="Images.html/dog.png">
-                    <h4>View More</h4>
-                    <figcaption>
-                        Dog Safe
-                    </figcaption>
-                </figure>
-                <figure class="blue">
-                    <img src="Images.html/gluten-free.png">
-                    <h4>View More</h4>
-                    <figcaption>
-                        Gluten Free
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="menu-4 menu-view">
-            <h2>Trending Now <span>- What’s hot (and cold) right now.</span></h2>
-            <div class="frozen-desserts">
-                <figure class="pink"><img src="Images.html/Trend1.png">
-                    <h4>View More</h4>
-                    <figcaption>Pistachio Ice Cream – $7.00</figcaption>
-                </figure>
-                <figure class="blue"><img src="Images.html/Trend2.png">
-                    <h4>View More</h4>
-                    <figcaption>California Chicken Clubhouse - $17.00</figcaption>
-                </figure>
-                <figure class="pink"><img src="Images.html/Trend3.png">
-                    <h4>View More</h4>
-                    <figcaption>Ube Ice Cream - $6.00</figcaption>
-                </figure>
-            </div>
-        </section>
-        <article id="about">
-            <h2>About</h2>
-            <p>Since its launch in 2019, Dug & Betty's Ice Creamery has been establishing itself as one of Winnipeg's
-                latest culinary hot spots. The Parisian-inspired setting is unlike anything this side of the Prairies -
-                home to tantalizing small batch gourmet ice cream creations such as Strawberry Honey Balsamic Pepper,
-                Sour Cherry with Dark Chocolate, Coconut Chocolate Fudge Oreo, Ube, and Matcha.<br>
-
-                Dug & Betty's Ice Creamery is the latest brain child of Chef Fern Kirouac. It's located in the heart of
-                Winnipeg's French quarter, Saint-Boniface; across the street from his other culinary success, InFerno's
-                Bistro. It was named after his cherished basset hounds (who are the unofficial ambassadors). Also named
-                after the duo are creations like the Dashing Dug Sundae and the Bad Betty Sundae.<br>
-
-                The animated menu also offers a wide range of lush spirits like champagne / beer floats and a bold
-                selection of fine wines. These can be enjoyed inside the 30-seat establishment or outdoors on the patio.
-            </p>
-        </article>
-        <section id="reviews">
-            <div>
-                <h2>Customer Reviews</h2>
-                <p id="review-sub">"Naturally loved by our customers."</p>
-            </div>
-            <div id="review-grid">
-                <figure>
-                    <img src="Images.html/review1.png">
-                </figure>
-                <figure>
-                    <img src="Images.html/review2.png">
-                </figure>
-                <figure>
-                    <img src="Images.html/review3.png">
-                </figure>
-                <figure>
-                    <img src="Images.html/review4.png">
-                </figure>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
-                <p>309 Des Meurons Street<br>
-                    Winnipeg, Manitoba, Canada R2H 2N4<br>
-                    204-417-0026</p>
+            <div class="content" id="dropdwn">
+                <a href="index.html">Home</a>
+                <a href="index.html">Menu</a>
+                <a href="index.html">All Items</a>
+                <a href="index.html">Contact</a>
             </div>
 
-            <div class="footer-middle">
-                <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="Products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
-                </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
-                <div class="social-icons">
-                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
-                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+            <figure>
+                <a><img src="Images.html/facebook_1384053.png" alt="Facebook"></a>
+            </figure>
+            <figure>
+                <a><img src="Images.html/instagram_2111463.png" alt="Instagram"></a>
+            </figure>
+        </nav>
+        <header>
+            <div class="cover">
+                <img src="Images.html/Cover.png" alt="Responsive Image" />
+                <div class="gradient"></div>
+                <div class="overlay"></div>
+                <img id="logo" src="Images.html/logo.png" />
+                <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
+                </h1>
+                <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
+            </div>
+        </header>
+        <figure class="banner">
+            <img src="Images.html/freepik__adjust__78665.png">
+        </figure>
+        <main>
+            <div id="menu-section">
+                <div id="menu">
+                    <div class="menu-wrapper">
+                        <img id="slide">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <button onclick="window.location.href='menu.html'">Menu</button>
                 </div>
             </div>
 
-            <div class="footer-right">
-                <h3>Hours of Operation</h3>
-                <p>
-                    Monday Closed<br>
-                    Tuesday 11:00am - 8:00pm<br>
-                    Wednesday 11:00am - 8:00pm<br>
-                    Thursday 11:00am - 8:00pm<br>
-                    Friday 11:00am - 8:00pm<br>
-                    Saturday 11:00am - 8:00pm<br>
-                    Sunday 11:00am - 8:00pm
+            <section class="menu-4 menu-view">
+                <h2>Specialties</h2>
+                <div class="frozen-desserts">
+                    <figure class="pink">
+                        <img src="Images.html/vegan.png">
+                        <h4>View More</h4>
+                        <figcaption>
+                            Vegan
+                        </figcaption>
+                    </figure>
+                    <figure class="blue">
+                        <img src="Images.html/dairy.png">
+                        <h4>View More</h4>
+                        <figcaption>
+                            Dairy Free
+                        </figcaption>
+                    </figure>
+                    <figure class="pink">
+                        <img src="Images.html/dog.png">
+                        <h4>View More</h4>
+                        <figcaption>
+                            Dog Safe
+                        </figcaption>
+                    </figure>
+                    <figure class="blue">
+                        <img src="Images.html/gluten-free.png">
+                        <h4>View More</h4>
+                        <figcaption>
+                            Gluten Free
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="menu-4 menu-view">
+                <h2>Trending Now <span>- What’s hot (and cold) right now.</span></h2>
+                <div class="frozen-desserts">
+                    <figure class="pink"><img src="Images.html/Trend1.png">
+                        <h4>View More</h4>
+                        <figcaption>Pistachio Ice Cream – $7.00</figcaption>
+                    </figure>
+                    <figure class="blue"><img src="Images.html/Trend2.png">
+                        <h4>View More</h4>
+                        <figcaption>California Chicken Clubhouse - $17.00</figcaption>
+                    </figure>
+                    <figure class="pink"><img src="Images.html/Trend3.png">
+                        <h4>View More</h4>
+                        <figcaption>Ube Ice Cream - $6.00</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <article id="about">
+                <h2>About</h2>
+                <p>Since its launch in 2019, Dug & Betty's Ice Creamery has been establishing itself as one of
+                    Winnipeg's
+                    latest culinary hot spots. The Parisian-inspired setting is unlike anything this side of the
+                    Prairies -
+                    home to tantalizing small batch gourmet ice cream creations such as Strawberry Honey Balsamic
+                    Pepper,
+                    Sour Cherry with Dark Chocolate, Coconut Chocolate Fudge Oreo, Ube, and Matcha.<br>
+
+                    Dug & Betty's Ice Creamery is the latest brain child of Chef Fern Kirouac. It's located in the heart
+                    of
+                    Winnipeg's French quarter, Saint-Boniface; across the street from his other culinary success,
+                    InFerno's
+                    Bistro. It was named after his cherished basset hounds (who are the unofficial ambassadors). Also
+                    named
+                    after the duo are creations like the Dashing Dug Sundae and the Bad Betty Sundae.<br>
+
+                    The animated menu also offers a wide range of lush spirits like champagne / beer floats and a bold
+                    selection of fine wines. These can be enjoyed inside the 30-seat establishment or outdoors on the
+                    patio.
                 </p>
+            </article>
+            <section id="reviews">
+                <div>
+                    <h2>Customer Reviews</h2>
+                    <p id="review-sub">"Naturally loved by our customers."</p>
+                </div>
+                <div id="review-grid">
+                    <figure>
+                        <img src="Images.html/review1.png">
+                    </figure>
+                    <figure>
+                        <img src="Images.html/review2.png">
+                    </figure>
+                    <figure>
+                        <img src="Images.html/review3.png">
+                    </figure>
+                    <figure>
+                        <img src="Images.html/review4.png">
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                    <p>309 Des Meurons Street<br>
+                        Winnipeg, Manitoba, Canada R2H 2N4<br>
+                        204-417-0026</p>
+                </div>
+
+                <div class="footer-middle">
+                    <div class="nav">
+                        <a href="index.html">Home</a> |
+                        <a href="menu.html">Menu</a> |
+                        <a href="Products.html">All Items</a> |
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                    <div class="social-icons">
+                        <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                        <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <h3>Hours of Operation</h3>
+                    <p>
+                        Monday Closed<br>
+                        Tuesday 11:00am - 8:00pm<br>
+                        Wednesday 11:00am - 8:00pm<br>
+                        Thursday 11:00am - 8:00pm<br>
+                        Friday 11:00am - 8:00pm<br>
+                        Saturday 11:00am - 8:00pm<br>
+                        Sunday 11:00am - 8:00pm
+                    </p>
+                </div>
             </div>
-        </div>
-        <p class="copyright">© Dug & Betty’s 2025</p>
-    </footer>
+            <p class="copyright">© Dug & Betty’s 2025</p>
+        </footer>
 </body>
 <script>
 
@@ -435,24 +461,7 @@
     });
 
 
-    function drop() {
-        const dropdown = document.getElementById("dropdwn");
-        if (dropdown.style.display === "block") {
-            dropdown.style.display = "none";
-        } else {
-            dropdown.style.display = "block";
-        }
-    }
 
-    // Optional: close dropdown when clicking outside of it
-    window.addEventListener("click", function (e) {
-        const dropBtn = document.getElementById("move");
-        const dropContent = document.getElementById("dropdwn");
-
-        if (!dropBtn.contains(e.target) && !dropContent.contains(e.target)) {
-            dropContent.style.display = "none";
-        }
-    });
 </script>
 
 </html>

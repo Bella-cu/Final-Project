@@ -63,50 +63,31 @@ footer {
 nav img {
     width: clamp(13px, 3vw, 4vw);
 }
-#move{
-    padding-right: 2vw;
+div#home {
+  /*home button*/
+  margin-left: 14%;
+  /*spaces the home button from the left*/
+  margin-top: 0%;
+  position: absolute;
+  /*positions the home button*/
 }
+
 nav {
-    padding-right: 20vw;
     position: fixed;
     top: 0;
-    display: flex;
-    flex-direction:row-reverse;
-    gap: 2vw;
-    z-index: 1000;
-    transition: background-color 1s linear;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2vw;
+    transition: background-color 1s linear;
+    padding-right: 20vw;
     overflow: hidden;
 }
-.dropdwn{
-    overflow: hidden;
-}
-.dropbtn img:hover{
-        cursor: pointer;
-}
-.content {
-    display: none;
-    position: absolute;
-    background-color: #eafbff;
-    width: fit-content;
-    right: 2vw;
-    top: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
 
-.content a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    font-family: 'raleway', sans-serif;
-}
-
-.content a:hover {
-    background-color: #e94973;
-    color: white;
-}
 
 
 /*
