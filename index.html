@@ -202,16 +202,50 @@
     }
 </style>
 
-<body>
-    <header>
-        <div class="nav1">
-            <figure class="social-nav">
-                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
-                    <img src="Images.html/instagram_2111463.png" /></a>
-                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
-                    <img src="Images.html/facebook_1384053.png" /></a>
-            </figure>
+<body><!--
+    <nav>
+        <div id="nav-format">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="Products.html">All Items</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li><!--
+                <li><a href="https://www.instagram.com/dugandbettys/" target="_blank">
+                <img src="Images.html/instagram_2111463.png" /></a></li>
+                <li><a href="https://www.facebook.com/DugandBettys/" target="_blank">
+                <img src="Images.html/facebook_1384053.png" /></a></li>-->
+    </ul>
+    </div>
+    </nav>
+
+    <nav>
+        <figure id="move" class="dropbtn" onclick="drop()">
+            <a><img src="Images.html/menu-icon.png" alt="Menu Icon"></a>
+        </figure>
+
+        <div class="content" id="dropdwn">
+            <a href="index.html">Home</a>
+            <a href="index.html">Menu</a>
+            <a href="index.html">All Items</a>
+            <a href="index.html">Contact</a>
         </div>
+
+        <figure>
+            <a><img src="Images.html/facebook_1384053.png" alt="Facebook"></a>
+        </figure>
+        <figure>
+            <a><img src="Images.html/instagram_2111463.png" alt="Instagram"></a>
+        </figure>
+    </nav>
+    <header>
         <div class="cover">
             <img src="Images.html/Cover.png" alt="Responsive Image" />
             <div class="gradient"></div>
@@ -388,6 +422,37 @@
         setTimeout(changeImg, time);
     }
     window.onload = changeImg;
+
+
+    //Background "Appears"
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 10) {
+            nav.style.backgroundColor = "#00000073";
+        } else {
+            nav.style.backgroundColor = "transparent";
+        }
+    });
+
+
+    function drop() {
+        const dropdown = document.getElementById("dropdwn");
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+    // Optional: close dropdown when clicking outside of it
+    window.addEventListener("click", function (e) {
+        const dropBtn = document.getElementById("move");
+        const dropContent = document.getElementById("dropdwn");
+
+        if (!dropBtn.contains(e.target) && !dropContent.contains(e.target)) {
+            dropContent.style.display = "none";
+        }
+    });
 </script>
 
 </html>
