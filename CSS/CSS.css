@@ -33,7 +33,7 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     text-align: center;
 }
@@ -61,7 +61,7 @@ nav {
     top: 0;
     left: 0;
     width: auto;
-    background-color: "#ff87a3";
+    background-color: #ff87a3;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -71,6 +71,7 @@ nav {
     padding: 1vw 5vw;
     transition: 1s linear;
 }
+
 
 .nav {
     text-decoration: none;

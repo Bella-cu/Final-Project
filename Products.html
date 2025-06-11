@@ -62,6 +62,8 @@
             background-color: #e3c5cc;
         }
 
+
+
         .select {
             cursor: pointer;
             background-color: #eafbff;
@@ -146,9 +148,13 @@
 
         .select {
             overflow: hidden;
-            height: 4.6vw;
+            height: 4vw;
             padding: 0;
             transition: height 1s linear;
+        }
+
+        .active {
+            background-color: #e3c5cc;
         }
     </style>
 </head>
@@ -159,9 +165,9 @@
             <!-- Dropdown Content -->
             <div class="content" id="dropdwn">
                 <a href="index.html">Home</a>
-                <a href="index.html">Menu</a>
-                <a href="index.html">All Items</a>
-                <a href="index.html">Contact</a>
+                <a href="menu.html">Menu</a>
+                <a href="Products.html">All Items</a>
+                <a href="contact.html">Contact</a>
             </div>
             <!-- Menu Icon -->
             <figure>
@@ -194,66 +200,69 @@
                 <div class="back-button">
                     <h2>Products</h2>
                 </div>
-                <div class="select" id="select-1">
+                <div class="select">
                     <div class="section-title">
                         <h2>frozen desserts</h2>
                     </div>
-                    <div class="item" data-content="premium">
+                    <div class="item" data-content="premium" id="premium">
                         <h2>premium</h2>
                     </div>
-                    <div class="item" data-content="softServe">
+                    <div class="item" data-content="softServe" id="softServe">
                         <h2>soft serve</h2>
                     </div>
-                    <div class="item" data-content="cookie">
+                    <div class="item" data-content="cookie" id="cookie">
                         <h2>artisan cookie sandwich</h2>
                     </div>
-                    <div class="item" data-content="sundaes">
+                    <div class="item" data-content="sundaes" id="sundaes">
                         <h2>sundaes</h2>
                     </div>
-                    <div class="item" data-content="parfaits">
+                    <div class="item" data-content="parfaits" id="parfaits">
                         <h2>parfaits</h2>
                     </div>
-                    <div class="item" data-content="specialSundae">
+                    <div class="item" data-content="specialSundae" id="specialSundae">
                         <h2>specialty sundaes</h2>
                     </div>
-                    <div class="item" data-content="twister">
+                    <div class="item" data-content="twister" id="twister">
                         <h2>twister</h2>
                     </div>
                 </div>
-                <div class="select" id="select-2">
+                <div class="select">
                     <div class="section-title">
                         <h2>main dishes</h2>
                     </div>
-                    <div class="item" data-content="salad">
+                    <div class="item" data-content="salad" id="salad">
                         <h2>salads</h2>
                     </div>
-                    <div class="item" data-content="sandwich">
+                    <div class="item" data-content="sandwich" id="sandwich">
                         <h2>sandwiches</h2>
                     </div>
-                    <div class="item" data-content="hotDogs">
+                    <div class="item" data-content="hotDogs" id="hotDogs">
                         <h2>Hot dogs</h2>
                     </div>
-                    <div class="item" data-content="pastry">
+                    <div class="item" data-content="pastry" id="pastry">
                         <h2>Pastries</h2>
                     </div>
-                    <div class="item" data-content="milkshakes">
+                    <div class="item" data-content="milkShakes" id="shake">
                         <h2>Milkshakes</h2>
                     </div>
+                    <div class="item" data-content="drink" id="drink">
+                        <h2>Beverages</h2>
+                    </div>
                 </div>
-                <div class="select" id="select-3">
+                <div class="select">
                     <div class="section-title">
                         <h2>specialties</h2>
                     </div>
-                    <div class="item" data-content="glutenFree">
+                    <div class="item" data-content="glutenFree" id="glutenFree">
                         <h2>gluten free</h2>
                     </div>
-                    <div class="item" data-content="dairyFree">
+                    <div class="item" data-content="dairyFree" id="dairyFree">
                         <h2>dairy free</h2>
                     </div>
-                    <div class="item" data-content="vegan">
+                    <div class="item" data-content="vegan" id="vegan">
                         <h2>vegan</h2>
                     </div>
-                    <div class="item" data-content="dogSafe">
+                    <div class="item" data-content="dogSafe" id="dogSafe">
                         <h2>dog safe</h2>
                     </div>
                 </div>
@@ -360,7 +369,7 @@
                     <p><span>Hot Fudge, Peanut Butter & Spanish Peanuts</span> - $7.50</p>
                 </section>
             `,
-            milkshakes: `
+            milkShakes: `
                 <h2 id="header">Milkshakes</h2>
                 <section id="listing">
                     <p><span><b>Flavours:</b></span></p>
@@ -517,6 +526,27 @@
                     <p><span>Plain Betty Hot Dog <u>(Plain all-beef frank only)</u></span> - $8.00</br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
                     <p><span>Vegan Veronica <u>(Plain plant-based frank)</u></span> - $9.00</p>
                 </section>
+            `,
+            drink: `
+                <h2 id="header">Beverages</h2>
+                <section id="listing">
+                    <p><span><b>Drinks</b></span></p>
+                    <p><span>Bottled Pop (500 ml)</span> - $3.50</p>
+                    <p><span>Bottled Aquafina Water (500 ml)</span> - $2.75</p>
+                    <p><span>Fentimans Ginger Beer (275 ml)</span> - $4.35</p>
+                    <p><span>Perrier Original</span> - $3.25</br><i>A can of perrier carbonated natural mineral water.</i></p>
+                    <p><span>Dad's Root Beer (355 ml Bottle)</span> - $3.50</p>
+                    <p><span>Stewart's Black Cherry Soda (355 ml)</span> - $3.50</p>
+                    <p><span>Stewart's Key Lime Soda</span> - $3.50</p>
+                    <p><span>Mini Pop Cans</span> - $1.50</p>
+                    <p><span>Jones Strawberry Lime Soda (355ml)</span> - $3.00</p>
+                    <p><span><b>Beer</b></span></p>
+                    <p><span>Kilter Juicii IPA (1 x 473 ml Can)</span> - $10.00</br><i>(7.0% ABV)</i></p>
+                    <p><span>Nonsuch Belgian Blonde (1 x 473 ml Can)</span> - $10.00</br><i>(7.0% ABV)</i></p>
+                    <p><span>Nonsuch Pilsner (1 x 473 ml Can)</span> - $10.00</br><i>(4.8% ABV)</i></p>
+                    <p><span><b>Wine</b></span></p>
+                    <p><span>Lolea no 1 Sangria (1 x 200ml Bottle)</span> - $12.00</br><i>(7.0% ABV)</i></p>
+                </section>
             `
         };
         // Selects 'item' inside the <aside> element
@@ -551,52 +581,89 @@
             });
         });
 
-    var i = 0;//start point
-    var images = [];//makes an empty array
-    var time = 1000;//time in milliseconds
+        var i = 0;//start point
+        var images = [];//makes an empty array
+        var time = 1000;//time in milliseconds
 
-    images[0] = 'Images.html/sls1.png';
-    images[1] = 'Images.html/sls2.png';
-    images[2] = 'Images.html/sls3.png';
-    images[3] = 'Images.html/sls4.png';
-    images[4] = 'Images.html/sls5.png';
-    images[5] = 'Images.html/sls6.png';
+        images[0] = 'Images.html/sls1.png';
+        images[1] = 'Images.html/sls2.png';
+        images[2] = 'Images.html/sls3.png';
+        images[3] = 'Images.html/sls4.png';
+        images[4] = 'Images.html/sls5.png';
+        images[5] = 'Images.html/sls6.png';
 
-    //change image
-    function changeImg() {
-        document.getElementById('slide').src = images[i]
+        //change image
+        function changeImg() {
+            document.getElementById('slide').src = images[i]
 
-        if (i < images.length - 1) {
-            i++; //if not at the end, go to next img 
-        } else {
-            i = 0; //reset to 0
+            if (i < images.length - 1) {
+                i++; //if not at the end, go to next img 
+            } else {
+                i = 0; //reset to 0
+            }
+
+            setTimeout(changeImg, time);
+        }
+        window.onload = changeImg;
+
+
+        //Background "Appears"
+        window.addEventListener("scroll", function () {
+            const nav = document.querySelector("nav");
+            if (window.scrollY > 10) {
+                nav.style.backgroundColor = "#f7a3b7ab";
+            } else {
+                nav.style.backgroundColor = "transparent";
+            }
+        });
+
+
+        function drop() {
+            const dropdown = document.getElementById("dropdwn");
+            const icon = document.getElementById("move");
+
+            const isOpen = dropdown.classList.contains("active");
+
+            dropdown.classList.toggle("active");
+            icon.classList.toggle("rotate", !isOpen);
         }
 
-        setTimeout(changeImg, time);
-    }
-    window.onload = changeImg;
+        window.addEventListener('load', () => {
+            // Get the hash from the URL (e.g. #salad)
+            const hash = window.location.hash.substring(1); // remove the #
 
+            if (hash && menuContent[hash]) {
+                // Find the main content area where you want to inject HTML
+                const main = document.querySelector('main[data-content="defaultImg"]');
 
-    //Background "Appears"
-    window.addEventListener("scroll", function () {
-        const nav = document.querySelector("nav");
-        if (window.scrollY > 10) {
-            nav.style.backgroundColor = "#f7a3b7ab";
-        } else {
-            nav.style.backgroundColor = "transparent";
-        }
-    });
+                // Inject the content dynamically from menuContent
+                main.innerHTML = menuContent[hash];
 
+                // Optional: Scroll into view smoothly
+                main.scrollIntoView({ behavior: 'smooth' });
 
-    function drop() {
-        const dropdown = document.getElementById("dropdwn");
-        const icon = document.getElementById("move");
+                // Optional: If you want to highlight the selected menu item
+                const selectedItem = document.querySelector(`.item[data-content="${hash}"]`);
+                if (selectedItem) {
+                    selectedItem.classList.add('selected');  // add some CSS for .active to highlight
+                }
+                // 3. Show the parent .select section that contains it
+                // For example, for salad, it's inside #select-2
+                const parentSection = selectedItem.closest('.select');
+                if (parentSection) {
+                    // Show this section if it's hidden (e.g. style display block)
+                    parentSection.style.height = 'fit-content';
+                }
 
-        const isOpen = dropdown.classList.contains("active");
+                // Optionally hide other sections to simulate "opening only this section"
+                document.querySelectorAll('.select-1').forEach(section => {
+                    if (section !== parentSection) {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        });
 
-        dropdown.classList.toggle("active");
-        icon.classList.toggle("rotate", !isOpen);
-    }
     </script>
 </body>
 
