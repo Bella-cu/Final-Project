@@ -197,132 +197,186 @@
 </head>
 
 <body>
-    <header>
-        <div class="nav1">
-            <figure class="social-nav">
-                <a href="https://www.instagram.com/dugandbettys/" target="_blank">
-                    <img src="Images.html/instagram_2111463.png" /></a>
-                <a href="https://www.facebook.com/DugandBettys/" target="_blank">
-                    <img src="Images.html/facebook_1384053.png" /></a>
-            </figure>
-        </div>
-    </header>
-    <main>
-        <div class="background">
-            <div id="h1-border">
-                <h1 id="contact-h1">Leave Us A Review!</h1>
-            </div>
-            <div class="contact">
-                <!-- Contact form for user feedback and questions -->
-                <form class="form" action="thankyou.html" method="GET">
-                    <!-- Collects the user's full name for personalized responses. -->
-                    <label for="name">Full Name</label>
-                    <input tabindex="0" type="text" name="fullname" id="name" placeholder="What's your full name?"
-                        required aria-label="Full Name" />
 
-                    <!-- Allows me to contact the user with a reply. -->
-                    <label for="email">Email address</label>
-                    <input tabindex="0" type="email" id="email" name="email" placeholder="you@example.com" required
-                        aria-label="Email Address" />
+    <body>
+            <nav>
+                <!-- Dropdown Content -->
+                <div class="content" id="dropdwn">
+                    <a href="index.html">Home</a>
+                    <a href="index.html">Menu</a>
+                    <a href="index.html">All Items</a>
+                    <a href="index.html">Contact</a>
+                </div>
+                <!-- Menu Icon -->
+                <figure>
+                    <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()"
+                        style="cursor:pointer;">
+                </figure>
+            </nav>
+        <main>
+            <div class="background">
+                <div id="h1-border">
+                    <h1 id="contact-h1">Leave Us A Review!</h1>
+                </div>
+                <div class="contact">
+                    <!-- Contact form for user feedback and questions -->
+                    <form class="form" action="thankyou.html" method="GET">
+                        <!-- Collects the user's full name for personalized responses. -->
+                        <label for="name">Full Name</label>
+                        <input tabindex="0" type="text" name="fullname" id="name" placeholder="What's your full name?"
+                            required aria-label="Full Name" />
 
-                    <label for="email">Phone Number</label>
-                    <input tabindex="0" type="phone" id="phone" name="phone" placeholder="123 456 789" required
-                        aria-label="Phone Number" />
-                    <!--Users can write questions, comments, or suggestions here. -->
-                    <label for="feedback">Feedback</label>
-                    <textarea tabindex="0" id="message" name="feedback" placeholder="Write feedback and questions here"
-                        required aria-label="Feedback"></textarea>
+                        <!-- Allows me to contact the user with a reply. -->
+                        <label for="email">Email address</label>
+                        <input tabindex="0" type="email" id="email" name="email" placeholder="you@example.com" required
+                            aria-label="Email Address" />
 
-                    <!-- Lets users rate their experience from 1 to 5 stars. Each star is clickable and accessible. -->
-                    <label for="star">Rate your experience</label>
-                    <div class="stars" id="rating-stars" aria-label="Star rating from 1 to 5">
-                        <!-- Each star represents a rating value. -->
-                        <span tabindex="0" class="star" data-value="1" aria-label="1 star">&#9733;</span>
-                        <span tabindex="0" class="star" data-value="2" aria-label="2 stars">&#9733;</span>
-                        <span tabindex="0" class="star" data-value="3" aria-label="3 stars">&#9733;</span>
-                        <span tabindex="0" class="star" data-value="4" aria-label="4 stars">&#9733;</span>
-                        <span tabindex="0" class="star" data-value="5" aria-label="5 stars">&#9733;</span>
+                        <label for="email">Phone Number</label>
+                        <input tabindex="0" type="phone" id="phone" name="phone" placeholder="123 456 789" required
+                            aria-label="Phone Number" />
+                        <!--Users can write questions, comments, or suggestions here. -->
+                        <label for="feedback">Feedback</label>
+                        <textarea tabindex="0" id="message" name="feedback"
+                            placeholder="Write feedback and questions here" required aria-label="Feedback"></textarea>
+
+                        <!-- Lets users rate their experience from 1 to 5 stars. Each star is clickable and accessible. -->
+                        <label for="star">Rate your experience</label>
+                        <div class="stars" id="rating-stars" aria-label="Star rating from 1 to 5">
+                            <!-- Each star represents a rating value. -->
+                            <span tabindex="0" class="star" data-value="1" aria-label="1 star">&#9733;</span>
+                            <span tabindex="0" class="star" data-value="2" aria-label="2 stars">&#9733;</span>
+                            <span tabindex="0" class="star" data-value="3" aria-label="3 stars">&#9733;</span>
+                            <span tabindex="0" class="star" data-value="4" aria-label="4 stars">&#9733;</span>
+                            <span tabindex="0" class="star" data-value="5" aria-label="5 stars">&#9733;</span>
+                        </div>
+
+                        <!-- Sends the user to thank you page -->
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="border">
+                        <!-- Dug & Betty's Logo -->
+                        <img src="Images.html/logoup.png" alt="Dug and Betty’s Logo" />
+                        <p id="contact-p">309 Des Meurons Street<br>
+                            Winnipeg, Manitoba, Canada R2H 2N4 <br>
+                            204-417-0026</p>
                     </div>
-
-                    <!-- Sends the user to thank you page -->
-                    <button type="submit">Submit</button>
-                </form>
-                <div id="border">
-                    <!-- Dug & Betty's Logo -->
-                    <img src="Images.html/logoup.png" alt="Dug and Betty’s Logo" />
-                    <p id="contact-p">309 Des Meurons Street<br>
-                        Winnipeg, Manitoba, Canada R2H 2N4 <br>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
+                    <p>309 Des Meurons Street<br>
+                        Winnipeg, Manitoba, Canada R2H 2N4<br>
                         204-417-0026</p>
                 </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="Images.html/logo1.png" alt="Dug & Betty's Logo" class="logo" />
-                <p>309 Des Meurons Street<br>
-                    Winnipeg, Manitoba, Canada R2H 2N4<br>
-                    204-417-0026</p>
-            </div>
 
-            <div class="footer-middle">
-                <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="Products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
+                <div class="footer-middle">
+                    <div class="nav">
+                        <a href="index.html">Home</a> |
+                        <a href="menu.html">Menu</a> |
+                        <a href="Products.html">All Items</a> |
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                    <div class="social-icons">
+                        <img src="Images.html/facebook_1384053.png" alt="Facebook" />
+                        <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                    </div>
                 </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
-                <div class="social-icons">
-                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
-                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+
+                <div class="footer-right">
+                    <h3>Hours of Operation</h3>
+                    <p>
+                        Monday Closed<br>
+                        Tuesday 11:00am - 8:00pm<br>
+                        Wednesday 11:00am - 8:00pm<br>
+                        Thursday 11:00am - 8:00pm<br>
+                        Friday 11:00am - 8:00pm<br>
+                        Saturday 11:00am - 8:00pm<br>
+                        Sunday 11:00am - 8:00pm
+                    </p>
                 </div>
             </div>
+            <p class="copyright">© Dug & Betty’s 2025</p>
+        </footer>
+        <script>
+            const stars = document.querySelectorAll('.star');
 
-            <div class="footer-right">
-                <h3>Hours of Operation</h3>
-                <p>
-                    Monday Closed<br>
-                    Tuesday 11:00am - 8:00pm<br>
-                    Wednesday 11:00am - 8:00pm<br>
-                    Thursday 11:00am - 8:00pm<br>
-                    Friday 11:00am - 8:00pm<br>
-                    Saturday 11:00am - 8:00pm<br>
-                    Sunday 11:00am - 8:00pm
-                </p>
-            </div>
-        </div>
-        <p class="copyright">© Dug & Betty’s 2025</p>
-    </footer>
-    <script>
-        const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                // Handle mouse click
+                star.addEventListener('click', selectStar);
 
-        stars.forEach(star => {
-            // Handle mouse click
-            star.addEventListener('click', selectStar);
+                // Handle keyboard events (Enter or Space)
+                star.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault(); // Prevent page scroll on spacebar
+                        selectStar.call(star);
+                    }
+                });
+            });
 
-            // Handle keyboard events (Enter or Space)
-            star.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault(); // Prevent page scroll on spacebar
-                    selectStar.call(star);
+            function selectStar() {
+                const value = parseInt(this.getAttribute('data-value'));
+
+                // Remove 'selected' from all stars
+                stars.forEach(s => s.classList.remove('selected'));
+
+                // Add 'selected' to stars up to and including the clicked one
+                for (let i = 0; i < value; i++) {
+                    stars[i].classList.add('selected');
+                }
+            }
+
+            var i = 0;//start point
+            var images = [];//makes an empty array
+            var time = 1000;//time in milliseconds
+
+            images[0] = 'Images.html/sls1.png';
+            images[1] = 'Images.html/sls2.png';
+            images[2] = 'Images.html/sls3.png';
+            images[3] = 'Images.html/sls4.png';
+            images[4] = 'Images.html/sls5.png';
+            images[5] = 'Images.html/sls6.png';
+
+            //change image
+            function changeImg() {
+                document.getElementById('slide').src = images[i]
+
+                if (i < images.length - 1) {
+                    i++; //if not at the end, go to next img 
+                } else {
+                    i = 0; //reset to 0
+                }
+
+                setTimeout(changeImg, time);
+            }
+            window.onload = changeImg;
+
+
+            //Background "Appears"
+            window.addEventListener("scroll", function () {
+                const nav = document.querySelector("nav");
+                if (window.scrollY > 10) {
+                    nav.style.backgroundColor = "#f7a3b7ab";
+                } else {
+                    nav.style.backgroundColor = "#ff87a3";
                 }
             });
-        });
 
-        function selectStar() {
-            const value = parseInt(this.getAttribute('data-value'));
 
-            // Remove 'selected' from all stars
-            stars.forEach(s => s.classList.remove('selected'));
+            function drop() {
+                const dropdown = document.getElementById("dropdwn");
+                const icon = document.getElementById("move");
 
-            // Add 'selected' to stars up to and including the clicked one
-            for (let i = 0; i < value; i++) {
-                stars[i].classList.add('selected');
+                const isOpen = dropdown.classList.contains("active");
+
+                dropdown.classList.toggle("active");
+                icon.classList.toggle("rotate", !isOpen);
             }
-        }
-    </script>
-</body>
+
+        </script>
+    </body>
 
 </html>
