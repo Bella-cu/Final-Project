@@ -70,31 +70,19 @@
 </head>
 
 <body>
-    <div id="back-nav">
-        <nav>
-            <!-- Dropdown Content -->
-            <div class="content" id="dropdwn">
-                <a href="index.html">Home</a>
-                <a href="index.html">Menu</a>
-                <a href="index.html">All Items</a>
-                <a href="index.html">Contact</a>
-            </div>
-            <!-- Menu Icon -->
-            <figure>
-                <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
-            </figure>
-        </nav>
-        <header>
-            <div class="nav1">
-                <figure class="social-nav">
-                    <a href="https://www.instagram.com/dugandbettys/" target="_blank">
-                        <img src="Images.html/instagram_2111463.png" /></a>
-                    <a href="https://www.facebook.com/DugandBettys/" target="_blank">
-                        <img src="Images.html/facebook_1384053.png" /></a>
-                </figure>
-            </div>
-        </header>
-    </div>
+    <nav>
+        <!-- Dropdown Content -->
+        <div class="content" id="dropdwn">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="products.html">All Items</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- Menu Icon -->
+        <figure>
+            <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
+        </figure>
+    </nav>
     <!-- Confirm message and return button -->
     <main tabindex="0">
         <!-- Thanks for user feedback -->
@@ -123,13 +111,13 @@
                 <div class="nav">
                     <a href="index.html">Home</a> |
                     <a href="menu.html">Menu</a> |
-                    <a href="Products.html">All Items</a> |
+                    <a href="products.html">All Items</a> |
                     <a href="contact.html">Contact</a>
                 </div>
                 <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
                 <div class="social-icons">
-                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
-                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
                 </div>
             </div>
 
@@ -150,40 +138,13 @@
     </footer>
 </body>
 <script>
-
-    var i = 0;//start point
-    var images = [];//makes an empty array
-    var time = 1000;//time in milliseconds
-
-    images[0] = 'Images.html/sls1.png';
-    images[1] = 'Images.html/sls2.png';
-    images[2] = 'Images.html/sls3.png';
-    images[3] = 'Images.html/sls4.png';
-    images[4] = 'Images.html/sls5.png';
-    images[5] = 'Images.html/sls6.png';
-
-    //change image
-    function changeImg() {
-        document.getElementById('slide').src = images[i]
-
-        if (i < images.length - 1) {
-            i++; //if not at the end, go to next img 
-        } else {
-            i = 0; //reset to 0
-        }
-
-        setTimeout(changeImg, time);
-    }
-    window.onload = changeImg;
-
-
     //Background "Appears"
     window.addEventListener("scroll", function () {
         const nav = document.querySelector("nav");
         if (window.scrollY > 10) {
             nav.style.backgroundColor = "#f7a3b7ab";
         } else {
-            nav.style.backgroundColor = "transparent";
+            nav.style.backgroundColor = "#ff87a3";
         }
     });
 

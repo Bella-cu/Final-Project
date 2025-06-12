@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dugandbettys</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="CSS/CSS.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
     <link
@@ -198,38 +199,36 @@
         background-color: #79d3de;
         border: 4px solid #fa97ac;
         align-items: center;
-        margin-top: 15%;
+        margin-top: 6%;
     }
 </style>
 
 <body>
-    <div id="back-nav">
-        <nav>
-            <!-- Dropdown Content -->
-            <div class="content" id="dropdwn">
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="Products.html">All Items</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <!-- Menu Icon -->
-            <figure>
-                <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
-            </figure>
-        </nav>
+    <nav>
+        <!-- Dropdown Content -->
+        <div class="content" id="dropdwn">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="products.html">All Items</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- Menu Icon -->
+        <figure>
+            <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
+        </figure>
+    </nav>
 
-        <header>
-            <div class="cover">
-                <img src="Images.html/Cover.png" alt="Responsive Image" />
-                <div class="gradient"></div>
-                <div class="overlay"></div>
-                <img id="logo" src="Images.html/logo.png" />
-                <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
-                </h1>
-                <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
-            </div>
-        </header>
-    </div>
+    <header>
+        <div class="cover">
+            <img src="Images.html/Cover.png" alt="Responsive Image" />
+            <div class="gradient"></div>
+            <div class="overlay"></div>
+            <img id="logo" src="Images.html/logo.png" />
+            <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
+            </h1>
+            <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
+        </div>
+    </header>
     <figure class="banner">
         <img src="Images.html/freepik__adjust__78665.png">
     </figure>
@@ -248,28 +247,28 @@
             <h2>Specialties</h2>
             <div class="frozen-desserts">
                 <figure class="pink">
-                    <img src="Images.html/vegan.png">
+                    <a href="products.html#vegan"><img src="Images.html/vegan.png"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Vegan
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/dairy.png">
+                    <a href="products.html#dairyFree"><img src="Images.html/dairy.png"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Dairy Free
                     </figcaption>
                 </figure>
                 <figure class="pink">
-                    <img src="Images.html/dog.png">
+                    <a href="products.html#dogSafe"><img src="Images.html/dog.png"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Dog Safe
                     </figcaption>
                 </figure>
                 <figure class="blue">
-                    <img src="Images.html/gluten-free.png">
+                    <a href="products.html#glutenFree"><img src="Images.html/gluten-free.png"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Gluten Free
@@ -277,19 +276,16 @@
                 </figure>
             </div>
         </section>
-        <section class="menu-4 menu-view">
+        <section class="menu-4">
             <h2>Trending Now <span>- What’s hot (and cold) right now.</span></h2>
             <div class="frozen-desserts">
                 <figure class="pink"><img src="Images.html/Trend1.png">
-                    <h4>View More</h4>
                     <figcaption>Pistachio Ice Cream – $7.00</figcaption>
                 </figure>
                 <figure class="blue"><img src="Images.html/Trend2.png">
-                    <h4>View More</h4>
                     <figcaption>California Chicken Clubhouse - $17.00</figcaption>
                 </figure>
                 <figure class="pink"><img src="Images.html/Trend3.png">
-                    <h4>View More</h4>
                     <figcaption>Ube Ice Cream - $6.00</figcaption>
                 </figure>
             </div>
@@ -351,13 +347,13 @@
                 <div class="nav">
                     <a href="index.html">Home</a> |
                     <a href="menu.html">Menu</a> |
-                    <a href="Products.html">All Items</a> |
+                    <a href="products.html">All Items</a> |
                     <a href="contact.html">Contact</a>
                 </div>
                 <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
                 <div class="social-icons">
-                    <img src="Images.html/facebook_1384053.png" alt="Facebook" />
-                    <img src="Images.html/instagram_2111463.png" alt="Instagram" />
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
                 </div>
             </div>
 
@@ -411,7 +407,7 @@
         if (window.scrollY > 10) {
             nav.style.backgroundColor = "#f7a3b7ab";
         } else {
-            nav.style.backgroundColor = "transparent";
+            nav.style.backgroundColor = "#ff87a3";
         }
     });
 

@@ -57,18 +57,18 @@ nav img {
 
 
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-    left: 0;
-    width: auto;
+    right: 0;
+    width: 100%;
     background-color: #ff87a3;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: right;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 2vw;
-    padding: 1vw 5vw;
+    padding: 1vw 4vw;
     transition: 1s linear;
 }
 
@@ -84,10 +84,6 @@ nav {
         color 0.3s ease;
 }
 
-#back-nav {
-    background-color: #ff87a3;
-    position: relative;
-}
 
 .nav a {
     text-decoration: none;
@@ -112,8 +108,7 @@ nav {
     position: absolute;
     right: 10vw;
     background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d8f8ff;
     z-index: 10;
     display: flex;
     flex-direction: row;
@@ -128,14 +123,19 @@ nav {
 
 
 #dropdwn a {
-    padding: 10px;
+    padding: 1vw;
+    margin: 0;
     text-decoration: none;
     color: #333;
     display: block;
+    border: 2px solid #fff;
+        font-family: 'raleway', sans-serif;
+    font-size: clamp(8px, .9vw, 1vw);
 }
 
 #dropdwn a:hover {
-    background-color: #f0f0f0;
+    background-color: #ffeaef;
+    border: 2px solid #d8f8ff;
 }
 
 #move {
@@ -249,7 +249,6 @@ body {
 }
 
 .cover {
-    overflow: hidden;
     height: min-content;
     width: 100%;
     position: relative;
