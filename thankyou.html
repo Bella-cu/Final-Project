@@ -70,34 +70,33 @@
 </head>
 
 <body>
-    <nav>
-        <!-- Dropdown Content -->
-        <div class="content" id="dropdwn">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="products.html">All Items</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <!-- Menu Icon -->
+    <!-- Navigation bar at the top -->
+    <nav aria-label="Main Navigation">
+        <!-- Menu Icon (clickable image for dropdown) -->
         <figure>
-            <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
+            <img id="move" src="Images.html/menu-icon.png" alt="Open navigation menu" onclick="drop()"
+                style="cursor:pointer;" tabindex="0" role="button" aria-label="Open navigation menu">
         </figure>
+        <!-- Dropdown menu links -->
+        <div class="content" id="dropdwn" aria-label="Dropdown Navigation">
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="menu.html" aria-label="Menu">Menu</a>
+            <a href="products.html" aria-label="All Items">All Items</a>
+            <a href="contact.html" aria-label="Contact">Contact</a>
+        </div>
     </nav>
     <!-- Confirm message and return button -->
     <main tabindex="0">
         <!-- Thanks for user feedback -->
         <h1 tabindex="0">Thanks <span style="color: white;">for</span> <span style="color: #ff87a3;">Submitting!</span>
         </h1>
-
         <!-- Confirmation of successful message delivery -->
         <h2 tabindex="0">Your message has been sent successfully.</h2>
-
         <!-- Button to return to homepage, wrapped in a link -->
         <a href="index.html" aria-label="Return to homepage">
             <button type="button" id="button">Return to Homepage</button>
         </a>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -106,21 +105,31 @@
                     Winnipeg, Manitoba, Canada R2H 2N4<br>
                     204-417-0026</p>
             </div>
-
             <div class="footer-middle">
-                <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
+                <div class="nav" aria-label="Footer Navigation">
+                    <a href="index.html" aria-label="Home">Home</a> |
+                    <a href="menu.html" aria-label="Menu">Menu</a> |
+                    <a href="products.html" aria-label="All Items">All Items</a> |
+                    <a href="contact.html" aria-label="Contact">Contact</a>
                 </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <p>
+                    <a href="mailto:dugandbettys@gmail.com" class="email" aria-label="Email Dug & Betty's">
+                        dugandbettys@gmail.com
+                    </a>
+                </p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
-                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"
+                        aria-label="Dug & Betty's Facebook Page">
+                        <img id="facebook-1" src="Images.html/facebookl.png" alt="Facebook icon"
+                            onclick="document.getElementById('facebook-1').src='Images.html/facebook_1384053.png'">
+                    </a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"
+                        aria-label="Dug & Betty's Instagram Page">
+                        <img id="instagram-1" src="Images.html/instagram1.png" alt="Instagram icon"
+                            onclick="document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'">
+                    </a>
                 </div>
             </div>
-
             <div class="footer-right">
                 <h3>Hours of Operation</h3>
                 <p>
@@ -158,6 +167,15 @@
         dropdown.classList.toggle("active");
         icon.classList.toggle("rotate", !isOpen);
     }
+    document.getElementById("move").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault(); // prevent scrolling on Space
+            drop(); // call the existing function
+        }
+    });
+    document.getElementById("move").addEventListener("focus", function () {
+        drop(); // Open dropdown when image gets focus
+    });
 </script>
 
 </html>

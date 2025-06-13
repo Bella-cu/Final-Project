@@ -52,7 +52,9 @@
             padding: 1vw;
         }
 
-        .item:hover {
+        .item:hover,
+        .item:active,
+        .item:focus {
             cursor: pointer;
             background-color: #a59f9faa;
         }
@@ -81,7 +83,9 @@
             padding: 5% 0;
         }
 
-        .section-title:hover {
+        .section-title:hover,
+        .section-title:focus,
+        .section-title:active {
             cursor: pointer;
             background-color: #ffffffaa;
         }
@@ -156,129 +160,141 @@
         .active {
             background-color: #e3c5cc;
         }
-        .back-button a{
+
+        .back-button a {
             color: black;
             text-decoration: none;
         }
-        .back-button h2:hover{
+
+        .back-button h2:hover,
+        .back-button:focus,
+        .back-button:active {
             transform: scale(1.1);
         }
-        .back-button h2{
+
+        .back-button h2 {
             transition: all 1s linear;
         }
     </style>
 </head>
 
 <body>
-    <div id="back-nav">
-        <nav>
-            <!-- Dropdown Content -->
-            <div class="content" id="dropdwn">
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="products.html">All Items</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <!-- Menu Icon -->
-            <figure>
-                <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
-            </figure>
-        </nav>
-<div id="close">
+    <!-- Navigation bar at the top -->
+    <nav aria-label="Main Navigation">
+        <!-- Menu Icon (clickable image for dropdown) -->
+        <figure>
+            <img id="move" src="Images.html/menu-icon.png" alt="Open navigation menu" onclick="drop()"
+                style="cursor:pointer;" tabindex="0" role="button" aria-label="Open navigation menu">
+        </figure>
+        <!-- Dropdown menu links -->
+        <div class="content" id="dropdwn" aria-label="Dropdown Navigation">
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="menu.html" aria-label="Menu">Menu</a>
+            <a href="products.html" aria-label="All Items">All Items</a>
+            <a href="contact.html" aria-label="Contact">Contact</a>
+        </div>
+    </nav>
+    <div id="close">
         <header>
             <div class="cover">
-                <img src="Images.html/products.png" alt="Responsive Image" />
+                <img src="Images.html/products.png" alt="Assorted Dug & Betty's products" />
                 <div class="gradient"></div>
                 <div class="overlay"></div>
             </div>
         </header>
     </div>
     <figure class="banner">
-        <img src="Images.html/products-banner.png" alt="Menu Banner" />
+        <img src="Images.html/products-banner.png" alt="Dug & Betty's Products Banner" />
     </figure>
-</div>
     <div id="padding">
         <figure class="dogs">
-            <img src="Images.html/glass-dog-img.png" />
+            <img src="Images.html/glass-dog-img.png" alt="Decorative glass dog sculpture" tabindex="0" />
         </figure>
         <div id="menu">
             <main data-content="defaultImg">
                 <figure class="dogs products-img">
-                    <img src="Images.html/products-img.png">
+                    <img src="Images.html/products-img.png" alt="Selection of Dug & Betty's menu items">
                 </figure>
             </main>
-            <aside>
+            <aside aria-label="Product Categories">
                 <div class="back">
                     <h2>Products</h2>
                 </div>
                 <div class="select">
-                    <div class="section-title">
+                    <div class="section-title" tabindex="0" aria-label="Frozen Desserts">
                         <h2>frozen desserts</h2>
                     </div>
-                    <div class="item" data-content="premium" id="premium">
+                    <div class="item" data-content="premium" id="premium" tabindex="0" aria-label="Premium Ice Cream">
                         <h2>premium</h2>
                     </div>
-                    <div class="item" data-content="softServe" id="softServe">
+                    <div class="item" data-content="softServe" id="softServe" tabindex="0"
+                        aria-label="Soft Serve Ice Cream">
                         <h2>soft serve</h2>
                     </div>
-                    <div class="item" data-content="cookie" id="cookie">
+                    <div class="item" data-content="cookie" id="cookie" tabindex="0"
+                        aria-label="Artisan Cookie Sandwich">
                         <h2>artisan cookie sandwich</h2>
                     </div>
-                    <div class="item" data-content="sundaes" id="sundaes">
+                    <div class="item" data-content="sundaes" id="sundaes" tabindex="0" aria-label="Sundaes">
                         <h2>sundaes</h2>
                     </div>
-                    <div class="item" data-content="parfaits" id="parfaits">
+                    <div class="item" data-content="parfaits" id="parfaits" tabindex="0" aria-label="Parfaits">
                         <h2>parfaits</h2>
                     </div>
-                    <div class="item" data-content="specialSundae" id="specialSundae">
+                    <div class="item" data-content="specialSundae" id="specialSundae" tabindex="0"
+                        aria-label="Specialty Sundaes">
                         <h2>specialty sundaes</h2>
                     </div>
-                    <div class="item" data-content="twister" id="twister">
+                    <div class="item" data-content="twister" id="twister" tabindex="0" aria-label="Twister Desserts">
                         <h2>twister</h2>
                     </div>
                 </div>
                 <div class="select">
-                    <div class="section-title">
+                    <div class="section-title" tabindex="0" aria-label="Main Dishes">
                         <h2>main dishes</h2>
                     </div>
-                    <div class="item" data-content="salad" id="salad">
+                    <div class="item" data-content="salad" id="salad" tabindex="0" aria-label="Salads">
                         <h2>salads</h2>
                     </div>
-                    <div class="item" data-content="sandwich" id="sandwich">
+                    <div class="item" data-content="sandwich" id="sandwich" tabindex="0" aria-label="Sandwiches">
                         <h2>sandwiches</h2>
                     </div>
-                    <div class="item" data-content="hotDogs" id="hotDogs">
+                    <div class="item" data-content="hotDogs" id="hotDogs" tabindex="0" aria-label="Hot Dogs">
                         <h2>Hot dogs</h2>
                     </div>
-                    <div class="item" data-content="pastry" id="pastry">
+                    <div class="item" data-content="pastry" id="pastry" tabindex="0" aria-label="Pastries">
                         <h2>Pastries</h2>
                     </div>
-                    <div class="item" data-content="milkShakes" id="milkShakes">
+                    <div class="item" data-content="milkShakes" id="milkShakes" tabindex="0" aria-label="Milkshakes">
                         <h2>Milkshakes</h2>
                     </div>
-                    <div class="item" data-content="drink" id="drink">
+                    <div class="item" data-content="drink" id="drink" tabindex="0" aria-label="Beverages">
                         <h2>Beverages</h2>
                     </div>
                 </div>
                 <div class="select">
-                    <div class="section-title">
+                    <div class="section-title" tabindex="0" aria-label="Specialties">
                         <h2>specialties</h2>
                     </div>
-                    <div class="item" data-content="glutenFree" id="glutenFree">
+                    <div class="item" data-content="glutenFree" id="glutenFree" tabindex="0"
+                        aria-label="Gluten Free Options">
                         <h2>gluten free</h2>
                     </div>
-                    <div class="item" data-content="dairyFree" id="dairyFree">
+                    <div class="item" data-content="dairyFree" id="dairyFree" tabindex="0"
+                        aria-label="Dairy Free Options">
                         <h2>dairy free</h2>
                     </div>
-                    <div class="item" data-content="vegan" id="vegan">
+                    <div class="item" data-content="vegan" id="vegan" tabindex="0" aria-label="Vegan Options">
                         <h2>vegan</h2>
                     </div>
-                    <div class="item" data-content="dogSafe" id="dogSafe">
+                    <div class="item" data-content="dogSafe" id="dogSafe" tabindex="0" aria-label="Dog Safe Options">
                         <h2>dog safe</h2>
                     </div>
                 </div>
                 <div class="back-button back">
-                    <a href="index.html"><h2>back to home</h2></a>
+                    <a href="index.html" aria-label="Back to Home">
+                        <h2>back to home</h2>
+                    </a>
                 </div>
             </aside>
         </div>
@@ -292,16 +308,28 @@
                     204-417-0026</p>
             </div>
             <div class="footer-middle">
-                <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
+                <div class="nav" aria-label="Footer Navigation">
+                    <a href="index.html" aria-label="Home">Home</a> |
+                    <a href="menu.html" aria-label="Menu">Menu</a> |
+                    <a href="products.html" aria-label="All Items">All Items</a> |
+                    <a href="contact.html" aria-label="Contact">Contact</a>
                 </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <p>
+                    <a href="mailto:dugandbettys@gmail.com" class="email" aria-label="Email Dug & Betty's">
+                        dugandbettys@gmail.com
+                    </a>
+                </p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
-                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"
+                        aria-label="Dug & Betty's Facebook Page">
+                        <img id="facebook-1" src="Images.html/facebookl.png" alt="Facebook icon"
+                            onclick="document.getElementById('facebook-1').src='Images.html/facebook_1384053.png'">
+                    </a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"
+                        aria-label="Dug & Betty's Instagram Page">
+                        <img id="instagram-1" src="Images.html/instagram1.png" alt="Instagram icon"
+                            onclick="document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'">
+                    </a>
                 </div>
             </div>
             <div class="footer-right">
@@ -319,278 +347,301 @@
         </div>
         <p class="copyright">© Dug & Betty’s 2025</p>
     </footer>
-    <script>
-        const menuContent = {
-            premium: `
-                <h2 id="header">Premium Ice Cream</h2>
-                <section id="listing">
-                    <p><span>1 scoop</span> - $6.25</p>
-                    <p><span>2 scoops</span> - $9.25</p>
-                    <p><span>Kids</span> - $3.75</p>
-                    <p><span>Flights</span> - $12.50</p>
-                    <p><span>Pint</span> - $12.50</p>
-                </section>
-            `,
-            softServe: `
-                <h2 id="header">Soft Serve</h2>
-                <section id="listing">
-                    <p><span><b>Flavours: </b><i>Vanilla, Chocolate, & Twist</i></span></p>
-                    <p><span>Kids</span> - $3.50</p>
-                    <p><span>Small</span> - $4.00</p>
-                    <p><span>Medium</span> - $4.50</p>
-                    <p><span>Large</span> - $5.50</p>
-                    <p><span><b>Extras</b></span></p>
-                    <p><span>Peanuts</span> - $0.25</p>
-                    <p><span>Chocolate Sprinkles</span> - $0.25</p>
-                    <p><span>Rainbow Sprinkles</span> - $0.25</p>
-                    <p><span><b>Cone Dip</b></span></p>
-                    <p><span>Chocolate</span> - $0.75</p>
-                    <p><span>Birthday Cake Confetti</span> - $0.75</p>
-                    <p><span>Toasted Coconut</span> - $0.75</p>
-                </section>
-            `,
-            cookie: `
-                <h2 id="header">Artisan Cookie Sandwich</h2>
-                <section id="listing">
-                    <p><span>Fog & Oats</span> - $8.75<br><i>London Fog Ice Cream & Triple Oatmeal Cookie</i></p>
-                    <p><span>Cookie Monster</span> - $8.75<br><i>Cookie Monster Ice Cream & Chocolate Cookie</i></p>
-                    <p><span>Triple Chocolate Hazelnut</span> - $8.75<br><i>Milk chocolate, dark chocolate and cocoa nibs cookie with a hazelnut ice cream middle</i></p>
-                    <p><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With Vegan Double Chocolate Cookies</i></p>
-                    <p><span>Brown Butter Milk Chocolate Chip Cookie GF</span> - $8.75<br><i>With Vanilla Ice Cream</i></p>
-                </section>
-            `,
-            specialSundae: `
-                <h2 id="header">Specialty Sundaes</h2>
-                <section id="listing">
-                    <p><span><b>Flavours:</b></span></p>
-                    <p><span>Dashing Dug</span> - $11.00</p>
-                    <p><span>Bad Betty</span> - $11.00</p>
-                </section>
-            `,
-            parfaits: `
-                <h2 id="header">Parfaits</h2>
-                <section id="listing">
-                    <p><span><b>Flavours:</b></span></p>
-                    <p><span>Nutella®, Kit Kat® & Crushed Hazelnuts</span> - $7.50</p>
-                    <p><span>Cherries, Hot Fudge & Oreo</span> - $7.50</p>
-                    <p><span>Pineapple, Coconut, & Graham Crumb</span> - $7.50</p>
-                    <p><span>Peanut Butter, Butterscotch, Marshmallows</span> - $7.50</p>
-                    <p><span>Banana, Nutella®, Peanut Butter</span> - $7.50</p>
-                    <p><span>Hot Fudge, Marshmallows & Graham Crumb</span> - $7.50</p>
-                    <p><span>Hot Fudge, Peanut Butter & Spanish Peanuts</span> - $7.50</p>
-                </section>
-            `,
-            milkShakes: `
-                <h2 id="header">Milkshakes</h2>
-                <section id="listing">
-                    <p><span><b>Flavours:</b></span></p>
-                    <p><span>Chocolate</span> - $7.25</p>
-                    <p><span>Strawberry</span> - $7.25</p>
-                    <p><span>Blueberry</span> - $7.25</p>
-                    <p><span>Apple</span> - $7.25</p>
-                    <p><span>Caramel</span> - $7.25</p>
-                    <p><span>Pineapple</span> - $7.25</p>
-                    <p><span>Nutella®</span> - $7.25</p>
-                    <p><span>Root Beer</span> - $7.25</p>
-                    <p><span>Bubble Gum</span> - $7.25</p>
-                    <p><span>Peanut Butter</span> - $7.25</p>
-                    <p><span>Banana</span> - $7.25</p>
-                    <p><span>Coconut</span> - $7.25</p>
-                    <p><span>Cherry</span> - $7.25</p>
-                    <p><span>Vanilla</span> - $7.25</p>
-                    <p><span>Skor®</span> - $7.25</p>
-                    <p><span>Oreo®</span> - $7.25</p>
-                </section>
-            `,
-            sundaes: `
-                <h2 id="header">Sundaes</h2>
-                <section id="listing">
-                    <p><span>Small</span> - $6.75</p>
-                    <p><span>Large</span> - $8.25</p>
-                    <p><span><b>Flavours:</b></span></p>
-                    <p><span>Hot Fudge</span></p>
-                    <p><span>Strawberry</span></p>
-                    <p><span>Butterscotch</span></p>
-                    <p><span>Blueberry</span></p>
-                    <p><span>Apple</span></p>
-                    <p><span>Caramel</span></p>
-                    <p><span>Cherry</span></p>
-                    <p><span>Pineapple</span></p>
-                </section>
-            `,
-            twister: `
-                <h2 id="header">Twister</h2>
-                <section id="listing">
-                    <p><span>Small</span> - $6.75</p>
-                    <p><span>Large</span> - $8.25</p>
-                    <p><span><b>Flavours:</b></span></p>
-                    <p><span>Oreo®</span></p>
-                    <p><span>Kit Kat®</span></p>
-                    <p><span>Reese's Pieces®</span></p>
-                    <p><span>Cookie Dough</span></p>
-                    <p><span>Nerds®</span></p>
-                    <p><span>Smarties®</span></p>
-                    <p><span>Skor®</span></p>
-                    <p><span>Jolly Rancher®</span></p>
-                    <p><span>Brownie</span></p>
-                    <p><span><b>Extra Toppings</b> - $0.80</span></p>
-                </section>
-            `,
-            salad: `
-                <h2 id="header">Salads</h2>
-                <section id="listing">
-                    <p><span>Kale Caesar <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Fresh kale, avocado, radish, green onions, asiago cheese with sumac croutons dressed in a tahini and miso infused caesar dressing.</i></p>
-                    <p><span>Add Sliced Chicken Breast</span> - $5.00</p>
-                    <p><span>Beet Salad <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
-                </section>
-            `,
-            sandwich: `
-                <h2 id="header">Sandwiches</h2>
-                <section id="listing">
-                    <p><span><b>Make any of our Sandwiches a Combo! </b></span></br><i class="less">Add a Cup of Soup - $3.00 | Large Soup - $7.00 | Kale Caesar - $7.00 | Beet Salad - $7.00 | House Salad - $6.00</i></p>
-                    <p><span>Caprese</span> - $14.00</br><i>Tomatoes, basil, cucumber, radish, fresh mozzarella, pesto, mayo and microgreens.</i></p>
-                    <p><span>Pulled Pork Sandwich</span> - $15.00</br><i>Slow Braised Pork Mixed With a BBQ Sauce on a Portuguese Bun With Mayo, Cheddar, Crispy Onions, House Pickled Cabbage.</i></p>
-                    <p><span>Smoked Ham & Swiss</span> - $15.00</br><i>Swiss cheese, arugula, tomatoes, smoked ham, mayo and lemon mascarpone. </i></p>
-                    <p><span>Beet Grilled Cheese</span> - $14.00</br><i>Beets and arugula with a whipped feta, honey and pistachio spread.</i></p>
-                    <p><span>Roast Beef Sandwich</span> - $17.00</br><i>Sliced roast beef with mushroom jus, Provolone cheese, lettuce, tomato & chipotle aioli.</i></p>
-                    <p><span>French Onion Grilled Cheese</span> - $12.00</br><i>Mouth-watering caramelized onions between two thick slices of swiss cheese.</i></p>
-                    <p><span>California Chicken Clubhouse</span> - $17.00</br><i>Chicken, bacon, lettuce, tomato, avocado, roasted tomato jam, mayo on Havarti cheese.</i></p>
-                    <p><span>Rueben</span> - $16.00</br><i>Montreal smoked meat on marble rye with house pickled cabbage, russian dressing, swiss cheese & sliced pickle.</i></p>
-                    <p><span>Breakfast Sandwich</span> - $12.00</br><i>Free Run Egg, Bacon, Lettuce, Tomato, Chipotle Mayo, Cheddar Cheese, Kaiser Bun.</i></p>
-                </section>
-            `,
-            hotDogs: `
-                <h2 id="header">Hot Dogs</h2>
-                <section id="listing">
-                    <p><span><b>1/4 lb. Jumbo All Beef Hotdog from Winkler Meats</b></span></br><i class="less">Add a Cup of Soup - $3.00 | Large Soup - $7.00 | Kale Caesar - $7.00 | Beet Salad - $7.00 | House Salad - $6.00</i></p>
-                    <p><span>Don Juan</span> - $11.00</br><i>La bamba, mexican street corn, feta cheese, chipotle aioli.</i></p>
-                    <p><span>Vegan Veronica (Served Plain Unless Specified)</span> - $9.00</br><i>Plant Based Frankfurter On a Cart Bun With Choice of Condiments.</i></p>
-                    <p><span>The Hound Dug</span> - $12.00</br><i>Creamy peanut butter, bacon, relish, crispy onions, Bothwell cheddar, cilantro, mint & sweet chili.</i></p>
-                    <p><span>Bison Chili Dog</span> - $12.00</br><i>4 oz. of ground Manitoba bison chili, mayo, mustard, Bothwell cheddar & crispy onions.</i></p>
-                    <p><span>Plain Betty</span> - $8.00</p>
-                    <p><span><b>Condiments:</b></span></p>
-                    <p><span>Ketchup</span></p>
-                    <p><span>Green Relish</span></p>
-                    <p><span>Yellow Mustard</span></p>
-                    <p><span>Mayonaise</span></p>
-                    <p><span>Chipotle Mayo</span></p>
-                    <p><span><b>Extras:</b></span> - $1.00 Each</p>
-                    <p><span>Cheese</span></p>
-                    <p><span>Bacon</span></p>
-                    <p><span>Crispy Onions</span></p>
-                    <p><span>Raw Onions</span></p>
-                    <p><span>Picked Cabbage</span></p>
-                    <p><span>Sliced Pickle</span></p>
-                </section>
-            `,
-            pastry: `
-                <h2 id="header">Pastries and Yummy Add Ons</h2>
-                <section id="listing">
-                    <p><span>Dashing Dug Blondie</span> - $5.00</br><i>Chewy chocolate chips and walnut bar.</i></p>
-                    <p><span>Bad Betty Brownie</span> - $5.00</br><i>Marshmallows, slivered almonds, chocolate chips, caramel squares, puffed rice, and the finest cocoa.</i></p>
-                    <p><span>Junkfood Square</span> - $4.50</br><i>Popcorn, pretzels, potato chips, peanuts and marshmallows.</i></p>
-                    <p><span>Mini Pies</span> - $6.00</p>
-                    <p><span>Butter Tart</span> - $2.00</p>
-                    <p><span>Peanut Butter Marshmallow Square</span> - $4.50</br><i>Peanut butter butterscotch and rainbow mini marshmallow square.</i></p>
-                    <p><span>Peanut Butter Oatmeal Chocolate Chip M&M Cookie</span> - $1.75</p>
-                    <p><span>Milk & Dark Chocolate Chip Cookie w/ Cacao Nibs</span> - $2.00</br><i>Triple chocolate chip cookie made with milk chocolate chips, dark chocolate chips, and cacao nibs.</i></p>
-                    <p><span>Triple Oatmeal Cranberry and Pecan Cookie</span> - $1.75</br><i>A.K.A. the fog and oats cookie.</i></p>
-                    <p><span>Vegan Oatmeal Cookie</span> - $2.00</br><i>Vegan Oatmeal Dried Currant Cookie.</i></p>
-                    <p><span>Gluten Free Chocolate Chip Cookie</span> - $2.00</br><i>Gluten Free Brown Butter Chocolate Chip Cookie.</i></p>
-                    <p><span>Vegan Double Chocolate Chip Cookie</span> - $2.00</br><i>Vegan Chocolate Cookie with Chocolate Chips.</i></p>
-                    <p><span>Date Square</span> - $4.00</br><i>Just like grandma used to make.</i></p>
-                </section>
-            `,
-            glutenFree: `
-                <h2 id="header">Gluten Free</h2>
-                <section id="listing">
-                    <p><span>Kale Caesar <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Fresh kale, avocado, radish, green onions, asiago cheese with sumac croutons dressed in a tahini and miso infused caesar dressing.</i></p>
-                    <p><span>Beet Salad <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
-                    <p><span>Brown Butter Milk Chocolate Chip Cookie GF</span> - $8.75<br><i>With Vanilla Ice Cream</i></p>
-                    <p><span>Gluten Free Chocolate Chip Cookie</span> - $2.00</br><i>Gluten Free Brown Butter Chocolate Chip Cookie.</i></p>
-                </section>
-            `,
-            dairyFree: `
-                <h2 id="header">Dairy Free</h2>
-                <section id="listing">
-                    <p><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With Vegan Double Chocolate Cookies</i></p>
-                </section>
-            `,
-            vegan: `
-                <h2 id="header">Vegan</h2>
-                <section id="listing">
-                    <p><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With Vegan Double Chocolate Cookies</i></p>
-                    <p><span>Kale Caesar <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Fresh kale, avocado, radish, green onions, asiago cheese with sumac croutons dressed in a tahini and miso infused caesar dressing.</i></p>
-                    <p><span>Beet Salad <u>(GF / Vegan upon request)</u></span> - $13.00</br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
-                    <p><span>Vegan Veronica (Served Plain Unless Specified)</span> - $9.00</br><i>Plant Based Frankfurter On a Cart Bun With Choice of Condiments.</i></p>
-                    <p><span>Vegan Oatmeal Cookie</span> - $2.00</br><i>Vegan Oatmeal Dried Currant Cookie.</i></p>
-                    <p><span>Vegan Double Chocolate Chip Cookie</span> - $2.00</br><i>Vegan Chocolate Cookie with Chocolate Chips.</i></p>
-                </section>
-            `,
-            dogSafe: `
-                <h2 id="header">Dog Safe</h2>
-                <section id="listing">
-                    <p><span><b>Always double-check with the staff to confirm.</b></span></p>
-                    <p><span>Mango Sorbetto (GF, DF/V)</span></p>
-                    <p><span>Lemon Lime Sorbetto (GF, DF/V)</span></p>
-                    <p><span>Raspberry Sorbetto (GF, DF/V)</span></p>
-                    <p><span>Plain Betty Hot Dog <u>(Plain all-beef frank only)</u></span> - $8.00</br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
-                    <p><span>Vegan Veronica <u>(Plain plant-based frank)</u></span> - $9.00</p>
-                </section>
-            `,
-            drink: `
-                <h2 id="header">Beverages</h2>
-                <section id="listing">
-                    <p><span><b>Drinks</b></span></p>
-                    <p><span>Bottled Pop (500 ml)</span> - $3.50</p>
-                    <p><span>Bottled Aquafina Water (500 ml)</span> - $2.75</p>
-                    <p><span>Fentimans Ginger Beer (275 ml)</span> - $4.35</p>
-                    <p><span>Perrier Original</span> - $3.25</br><i>A can of perrier carbonated natural mineral water.</i></p>
-                    <p><span>Dad's Root Beer (355 ml Bottle)</span> - $3.50</p>
-                    <p><span>Stewart's Black Cherry Soda (355 ml)</span> - $3.50</p>
-                    <p><span>Stewart's Key Lime Soda</span> - $3.50</p>
-                    <p><span>Mini Pop Cans</span> - $1.50</p>
-                    <p><span>Jones Strawberry Lime Soda (355ml)</span> - $3.00</p>
-                    <p><span><b>Beer</b></span></p>
-                    <p><span>Kilter Juicii IPA (1 x 473 ml Can)</span> - $10.00</br><i>(7.0% ABV)</i></p>
-                    <p><span>Nonsuch Belgian Blonde (1 x 473 ml Can)</span> - $10.00</br><i>(7.0% ABV)</i></p>
-                    <p><span>Nonsuch Pilsner (1 x 473 ml Can)</span> - $10.00</br><i>(4.8% ABV)</i></p>
-                    <p><span><b>Wine</b></span></p>
-                    <p><span>Lolea no 1 Sangria (1 x 200ml Bottle)</span> - $12.00</br><i>(7.0% ABV)</i></p>
-                </section>
-            `
-        };
-        // Selects 'item' inside the <aside> element
-        const items = document.querySelectorAll('aside .item');
-        // Selects the <main> element where content will be displayed
-        const main = document.querySelector('main');
-        // Loop through each item in the sidebar
-        items.forEach(item => {
-            // Add a click event listener to each item
-            item.addEventListener('click', () => {
-                // Get the value of the 'data-content' attribute for the clicked item
-                const contentKey = item.getAttribute('data-content');
-                // If there is content for this key in the menuContent object
-                if (menuContent[contentKey]) {
-                    // Update the main area with the corresponding content
-                    main.innerHTML = menuContent[contentKey];
-                    // When an item is clicked, first remove the 'selected' class from all items
-                    items.forEach(i => i.classList.remove('selected'));
-                    // Then add the 'selected' class to the clicked item only
-                    item.classList.add('selected');
-                }
-            });
+</body>
+<script>
+    const menuContent = {
+        premium: `
+        <h2 id="header">Premium Ice Cream</h2>
+        <section id="listing">
+            <p><span>1 scoop</span> - $6.25</p>
+            <p tabindex="0"><span>2 scoops</span> - $9.25</p>
+            <p><span>Kids</span> - $3.75</p>
+            <p tabindex="0"><span>Flights</span> - $12.50</p>
+            <p><span>Pint</span> - $12.50</p>
+        </section>
+    `,
+        softServe: `
+        <h2 id="header">Soft Serve</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Flavours: </b><i>Vanilla, Chocolate, & Twist</i></span></p>
+            <p><span>Kids</span> - $3.50</p>
+            <p tabindex="0"><span>Small</span> - $4.00</p>
+            <p><span>Medium</span> - $4.50</p>
+            <p tabindex="0"><span>Large</span> - $5.50</p>
+            <p><span><b>Extras</b></span></p>
+            <p tabindex="0"><span>Peanuts</span> - $0.25</p>
+            <p><span>Chocolate Sprinkles</span> - $0.25</p>
+            <p tabindex="0"><span>Rainbow Sprinkles</span> - $0.25</p>
+            <p><span><b>Cone Dip</b></span></p>
+            <p tabindex="0"><span>Chocolate</span> - $0.75</p>
+            <p><span>Birthday Cake Confetti</span> - $0.75</p>
+            <p tabindex="0"><span>Toasted Coconut</span> - $0.75</p>
+        </section>
+    `,
+        cookie: `
+        <h2 id="header">Artisan Cookie Sandwich</h2>
+        <section id="listing">
+            <p><span>Fog & Oats</span> - $8.75<br><i>London Fog Ice Cream & Triple Oatmeal Cookie</i></p>
+            <p tabindex="0"><span>Cookie Monster</span> - $8.75<br><i>Cookie Monster Ice Cream & Chocolate Cookie</i></p>
+            <p><span>Triple Chocolate Hazelnut</span> - $8.75<br><i>Milk chocolate, dark chocolate and cocoa nibs cookie with a hazelnut ice cream middle</i></p>
+            <p tabindex="0"><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With Vegan Double Chocolate Cookies</i></p>
+            <p><span>Brown Butter Milk Chocolate Chip Cookie GF</span> - $8.75<br><i>With Vanilla Ice Cream</i></p>
+        </section>
+    `,
+        specialSundae: `
+        <h2 id="header">Specialty Sundaes</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Flavours:</b></span></p>
+            <p><span>Dashing Dug</span> - $11.00</p>
+            <p tabindex="0"><span>Bad Betty</span> - $11.00</p>
+        </section>
+    `,
+        parfaits: `
+        <h2 id="header">Parfaits</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Flavours:</b></span></p>
+            <p><span>Nutella®, Kit Kat® & Crushed Hazelnuts</span> - $7.50</p>
+            <p tabindex="0"><span>Cherries, Hot Fudge & Oreo</span> - $7.50</p>
+            <p><span>Pineapple, Coconut, & Graham Crumb</span> - $7.50</p>
+            <p tabindex="0"><span>Peanut Butter, Butterscotch, Marshmallows</span> - $7.50</p>
+            <p><span>Banana, Nutella®, Peanut Butter</span> - $7.50</p>
+            <p tabindex="0"><span>Hot Fudge, Marshmallows & Graham Crumb</span> - $7.50</p>
+            <p><span>Hot Fudge, Peanut Butter & Spanish Peanuts</span> - $7.50</p>
+        </section>
+    `,
+        milkShakes: `
+        <h2 id="header">Milkshakes</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Flavours:</b></span></p>
+            <p><span>Chocolate</span> - $7.25</p>
+            <p tabindex="0"><span>Strawberry</span> - $7.25</p>
+            <p><span>Blueberry</span> - $7.25</p>
+            <p tabindex="0"><span>Apple</span> - $7.25</p>
+            <p><span>Caramel</span> - $7.25</p>
+            <p tabindex="0"><span>Pineapple</span> - $7.25</p>
+            <p><span>Nutella®</span> - $7.25</p>
+            <p tabindex="0"><span>Root Beer</span> - $7.25</p>
+            <p><span>Bubble Gum</span> - $7.25</p>
+            <p tabindex="0"><span>Peanut Butter</span> - $7.25</p>
+            <p><span>Banana</span> - $7.25</p>
+            <p tabindex="0"><span>Coconut</span> - $7.25</p>
+            <p><span>Cherry</span> - $7.25</p>
+            <p tabindex="0"><span>Vanilla</span> - $7.25</p>
+            <p><span>Skor®</span> - $7.25</p>
+            <p tabindex="0"><span>Oreo®</span> - $7.25</p>
+        </section>
+    `,
+        sundaes: `
+        <h2 id="header">Sundaes</h2>
+        <section id="listing">
+            <p><span>Small</span> - $6.75</p>
+            <p tabindex="0"><span>Large</span> - $8.25</p>
+            <p><span><b>Flavours:</b></span></p>
+            <p tabindex="0"><span>Hot Fudge</span></p>
+            <p><span>Strawberry</span></p>
+            <p tabindex="0"><span>Butterscotch</span></p>
+            <p><span>Blueberry</span></p>
+            <p tabindex="0"><span>Apple</span></p>
+            <p><span>Caramel</span></p>
+            <p tabindex="0"><span>Cherry</span></p>
+            <p><span>Pineapple</span></p>
+        </section>
+    `,
+        twister: `
+        <h2 id="header">Twister</h2>
+        <section id="listing">
+            <p><span>Small</span> - $6.75</p>
+            <p tabindex="0"><span>Large</span> - $8.25</p>
+            <p><span><b>Flavours:</b></span></p>
+            <p tabindex="0"><span>Oreo®</span></p>
+            <p><span>Kit Kat®</span></p>
+            <p tabindex="0"><span>Reese's Pieces®</span></p>
+            <p><span>Cookie Dough</span></p>
+            <p tabindex="0"><span>Nerds®</span></p>
+            <p><span>Smarties®</span></p>
+            <p tabindex="0"><span>Skor®</span></p>
+            <p><span>Jolly Rancher®</span></p>
+            <p tabindex="0"><span>Brownie</span></p>
+            <p><span><b>Extra Toppings</b> - $0.80</span></p>
+        </section>
+    `,
+        salad: `
+        <h2 id="header">Salads</h2>
+        <section id="listing">
+            <p tabindex="0"><span>Kale Caesar <u>(GF / Vegan upon request)</u></span> - $13.00<br><i>Fresh kale, avocado, radish, green onions, asiago cheese with sumac croutons dressed in a tahini and miso infused caesar dressing.</i></p>
+            <p><span>Add Sliced Chicken Breast</span> - $5.00</p>
+            <p tabindex="0"><span>Beet Salad <u>(GF / Vegan upon request)</u></span> - $13.00<br><i>Mixed artisan greens, beets, peppers, and hemp hearts with a lemon-thyme vinaigrette and aged white cheddar.</i></p>
+        </section>
+    `,
+        sandwich: `
+        <h2 id="header">Sandwiches</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Make any of our Sandwiches a Combo!</b></span><br><i>Add a Cup of Soup - $3.00 | Large Soup - $7.00 | Kale Caesar - $7.00 | Beet Salad - $7.00 | House Salad - $6.00</i></p>
+            <p><span>Caprese</span> - $14.00<br><i>Tomatoes, basil, cucumber, radish, fresh mozzarella, pesto, mayo and microgreens.</i></p>
+            <p tabindex="0"><span>Pulled Pork Sandwich</span> - $15.00<br><i>Slow Braised Pork with BBQ Sauce on Portuguese Bun, Cheddar, Crispy Onions, Pickled Cabbage.</i></p>
+            <p><span>Smoked Ham & Swiss</span> - $15.00<br><i>Swiss cheese, arugula, tomatoes, smoked ham, mayo and lemon mascarpone.</i></p>
+            <p tabindex="0"><span>Beet Grilled Cheese</span> - $14.00<br><i>Beets and arugula with whipped feta, honey and pistachio spread.</i></p>
+            <p><span>Roast Beef Sandwich</span> - $17.00<br><i>Sliced roast beef with mushroom jus, provolone, lettuce, tomato & chipotle aioli.</i></p>
+            <p tabindex="0"><span>French Onion Grilled Cheese</span> - $12.00<br><i>Caramelized onions between thick swiss cheese slices.</i></p>
+            <p><span>California Chicken Clubhouse</span> - $17.00<br><i>Chicken, bacon, lettuce, tomato, avocado, tomato jam, mayo on Havarti.</i></p>
+            <p tabindex="0"><span>Rueben</span> - $16.00<br><i>Montreal smoked meat on rye with cabbage, Russian dressing, swiss & pickle.</i></p>
+            <p><span>Breakfast Sandwich</span> - $12.00<br><i>Egg, bacon, lettuce, tomato, chipotle mayo, cheddar on Kaiser.</i></p>
+        </section>
+    `,
+        hotDogs: `
+        <h2 id="header">Hot Dogs</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>1/4 lb Jumbo All‑Beef Hotdog (Winkler Meats)</b></span><br><i>Add soup or salads for $3‑7.</i></p>
+            <p><span>Don Juan</span> - $11.00<br><i>La bamba, Mexican street corn, feta, chipotle aioli.</i></p>
+            <p tabindex="0"><span>Vegan Veronica</span> - $9.00<br><i>Plant‑based frank with choice of condiments.</i></p>
+            <p><span>The Hound Dug</span> - $12.00<br><i>PB, bacon, relish, onions, cheddar, cilantro, mint & chili.</i></p>
+            <p tabindex="0"><span>Bison Chili Dog</span> - $12.00<br><i>Manitoba bison chili, mayo, mustard, cheddar & onions.</i></p>
+            <p><span>Plain Betty</span> - $8.00</p>
+            <p tabindex="0"><span><b>Condiments:</b></span></p>
+            <p><span>Ketchup</span></p>
+            <p tabindex="0"><span>Green Relish</span></p>
+            <p><span>Yellow Mustard</span></p>
+            <p tabindex="0"><span>Mayonnaise</span></p>
+            <p><span>Chipotle Mayo</span></p>
+            <p tabindex="0"><span><b>Extras:</b></span> - $1.00 each</p>
+            <p><span>Cheese</span></p>
+            <p tabindex="0"><span>Bacon</span></p>
+            <p><span>Crispy Onions</span></p>
+            <p tabindex="0"><span>Raw Onions</span></p>
+            <p><span>Pickled Cabbage</span></p>
+            <p tabindex="0"><span>Sliced Pickle</span></p>
+        </section>
+    `,
+        pastry: `
+        <h2 id="header">Pastries & Add‑Ons</h2>
+        <section id="listing">
+            <p tabindex="0"><span>Dashing Dug Blondie</span> - $5.00<br><i>Chewy chocolate‑chip walnut bar.</i></p>
+            <p><span>Bad Betty Brownie</span> - $5.00<br><i>Brownie with marshmallows, nuts, choc chips & caramel.</i></p>
+            <p tabindex="0"><span>Junkfood Square</span> - $4.50<br><i>Popcorn, pretzels, chips, peanuts & marshmallows.</i></p>
+            <p><span>Mini Pies</span> - $6.00</p>
+            <p tabindex="0"><span>Butter Tart</span> - $2.00</p>
+            <p><span>PB Marshmallow Square</span> - $4.50<br><i>Peanut butter, butterscotch & mini marshmallows.</i></p>
+            <p tabindex="0"><span>PB Oatmeal Choc‑Chip M&M Cookie</span> - $1.75</p>
+            <p><span>Milk & Dark Chocolate Chip Cookie</span> - $2.00<br><i>Triple‑choc cookie w/ cacao nibs.</i></p>
+            <p tabindex="0"><span>Triple Oatmeal Cranberry‑Pecan Cookie</span> - $1.75<br><i>A.K.A. Fog & Oats cookie.</i></p>
+            <p><span>Vegan Oatmeal Cookie</span> - $2.00<br><i>Vegan dried‑currant oatmeal cookie.</i></p>
+            <p tabindex="0"><span>GF Chocolate Chip Cookie</span> - $2.00<br><i>Gluten‑free brown‑butter cookie.</i></p>
+            <p><span>Vegan Double‑Choc Cookie</span> - $2.00</p>
+            <p tabindex="0"><span>Date Square</span> - $4.00<br><i>Classic homemade‑style date square.</i></p>
+        </section>
+    `,
+        glutenFree: `
+        <h2 id="header">Gluten Free</h2>
+        <section id="listing">
+            <p tabindex="0"><span>Kale Caesar <u>(GF / Vegan on request)</u></span> - $13.00<br><i>Fresh kale, avocado, radish, green onions, asiago & sumac croutons in tahini‑miso dressing.</i></p>
+            <p><span>Beet Salad <u>(GF / Vegan on request)</u></span> - $13.00<br><i>Artisan greens, beets, peppers, hemp hearts & aged cheddar vinaigrette.</i></p>
+            <p tabindex="0"><span>Brown Butter GF Chocolate‑Chip Cookie</span> - $8.75<br><i>With vanilla ice cream.</i></p>
+            <p><span>GF Chocolate‑Chip Cookie</span> - $2.00</p>
+        </section>
+    `,
+        dairyFree: `
+        <h2 id="header">Dairy Free</h2>
+        <section id="listing">
+            <p tabindex="0"><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With vegan double‑choc cookies.</i></p>
+        </section>
+    `,
+        vegan: `
+        <h2 id="header">Vegan</h2>
+        <section id="listing">
+            <p tabindex="0"><span>Coconut Fudge Oreo® Ice Cream DF/V</span> - $8.75<br><i>With vegan double‑choc cookies.</i></p>
+            <p><span>Kale Caesar <u>(GF / Vegan on request)</u></span> - $13.00<br><i>Fresh kale, avocado, radish, green onions, asiago & sumac croutons in tahini‑miso dressing.</i></p>
+            <p tabindex="0"><span>Beet Salad <u>(GF / Vegan on request)</u></span> - $13.00<br><i>Artisan greens, beets, peppers, hemp hearts & aged cheddar vinaigrette.</i></p>
+            <p><span>Vegan Veronica</span> - $9.00<br><i>Plant‑based hot dog.</i></p>
+            <p tabindex="0"><span>Vegan Oatmeal Cookie</span> - $2.00</p>
+            <p><span>Vegan Double‑Choc Cookie</span> - $2.00</p>
+        </section>
+    `,
+        dogSafe: `
+        <h2 id="header">Dog Safe</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Always double‑check with staff to confirm.</b></span></p>
+            <p><span>Mango Sorbetto (GF, DF/V)</span></p>
+            <p tabindex="0"><span>Lemon Lime Sorbetto (GF, DF/V)</span></p>
+            <p><span>Raspberry Sorbetto (GF, DF/V)</span></p>
+            <p tabindex="0"><span>Plain Betty Hot Dog <u>(plain all‑beef frank)</u></span> - $8.00</p>
+            <p><span>Vegan Veronica <u>(plain plant‑based frank)</u></span> - $9.00</p>
+        </section>
+    `,
+        drink: `
+        <h2 id="header">Beverages</h2>
+        <section id="listing">
+            <p tabindex="0"><span><b>Drinks</b></span></p>
+            <p><span>Bottled Pop (500 ml)</span> - $3.50</p>
+            <p tabindex="0"><span>Bottled Aquafina Water (500 ml)</span> - $2.75</p>
+            <p><span>Fentimans Ginger Beer (275 ml)</span> - $4.35</p>
+            <p tabindex="0"><span>Perrier Original</span> - $3.25</p>
+            <p><span>Dad's Root Beer (355 ml)</span> - $3.50</p>
+            <p tabindex="0"><span>Stewart's Black Cherry Soda (355 ml)</span> - $3.50</p>
+            <p><span>Stewart's Key Lime Soda</span> - $3.50</p>
+            <p tabindex="0"><span>Mini Pop Cans</span> - $1.50</p>
+            <p><span>Jones Strawberry Lime Soda (355 ml)</span> - $3.00</p>
+            <p tabindex="0"><span><b>Beer</b></span></p>
+            <p><span>Kilter Juicii IPA (473 ml can)</span> - $10.00</p>
+            <p tabindex="0"><span>Nonsuch Belgian Blonde (473 ml can)</span> - $10.00</p>
+            <p><span>Nonsuch Pilsner (473 ml can)</span> - $10.00</p>
+            <p tabindex="0"><span><b>Wine</b></span></p>
+            <p><span>Lolea no. 1 Sangria (200 ml bottle)</span> - $12.00</p>
+        </section>
+    `,
+    };
+    // Selects 'item' inside the <aside> element
+    const items = document.querySelectorAll('aside .item');
+    // Selects the <main> element where content will be displayed
+    const main = document.querySelector('main');
+    // Loop through each item in the sidebar
+    items.forEach(item => {
+        // Add a click event listener to each item
+        item.addEventListener('click', () => {
+            const contentKey = item.getAttribute('data-content');
+            if (menuContent[contentKey]) {
+                main.innerHTML = menuContent[contentKey];
+                items.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+            }
         });
-        // Select all elements with the class "section-title"
-        document.querySelectorAll('.section-title').forEach(title => {
-            // Makes it clickable
-            title.addEventListener('click', () => {
-                // Find the closest parent element with the class "select"
-                const select = title.closest('.select');
-                // if closed open and if opened close
-                select.classList.toggle('show');
-            });
+        // Add keyboard accessibility: open on Enter or Space
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                item.click();
+                setTimeout(() => {
+                    const main = document.querySelector('main');
+                    const firstTabbable = main.querySelector('[tabindex="0"]');
+                    if (firstTabbable) {
+                        firstTabbable.focus();
+                    }
+                }, 100);
+            }
         });
+    });
+
+    // Section title logic (not inside the items.forEach!)
+    document.querySelectorAll('.section-title').forEach(title => {
+        // Makes it clickable
+        title.addEventListener('click', () => {
+            const select = title.closest('.select');
+            select.classList.toggle('show');
+        });
+        // Add keyboard accessibility: open on Enter or Space
+        title.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                title.click();
+                setTimeout(() => {
+                    const main = document.querySelector('main');
+                    const firstTabbable = main.querySelector('[tabindex="0"]');
+                    if (firstTabbable) {
+                        firstTabbable.focus();
+                    }
+                }, 100);
+            }
+        });
+    });
 
     //Background "Appears"
     window.addEventListener("scroll", function () {
@@ -612,44 +663,51 @@
         dropdown.classList.toggle("active");
         icon.classList.toggle("rotate", !isOpen);
     }
+    document.getElementById("move").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault(); // prevent scrolling on Space
+            drop(); // call the existing function
+        }
+    });
+    document.getElementById("move").addEventListener("focus", function () {
+        drop(); // Open dropdown when image gets focus
+    });
 
-        window.addEventListener('load', () => {
-            // Get the hash from the URL (e.g. #salad)
-            const hash = window.location.hash.substring(1); // remove the #
+    window.addEventListener('load', () => {
+        // Get the hash from the URL (e.g. #salad)
+        const hash = window.location.hash.substring(1); // remove the #
 
-            if (hash && menuContent[hash]) {
-                // Find the main content area where you want to inject HTML
-                const main = document.querySelector('main[data-content="defaultImg"]');
+        if (hash && menuContent[hash]) {
+            // Find the main content area where you want to inject HTML
+            const main = document.querySelector('main[data-content="defaultImg"]');
 
-                // Inject the content dynamically from menuContent
-                main.innerHTML = menuContent[hash];
+            // Inject the content dynamically from menuContent
+            main.innerHTML = menuContent[hash];
 
-                // Optional: Scroll into view smoothly
-                main.scrollIntoView({ behavior: 'smooth' });
+            // Optional: Scroll into view smoothly
+            main.scrollIntoView({ behavior: 'smooth' });
 
-                // Optional: If you want to highlight the selected menu item
-                const selectedItem = document.querySelector(`.item[data-content="${hash}"]`);
-                if (selectedItem) {
-                    selectedItem.classList.add('selected');  // add some CSS for .active to highlight
-                }
-                // 3. Show the parent .select section that contains it
-                // For example, for salad, it's inside #select-2
-                const parentSection = selectedItem.closest('.select');
-                if (parentSection) {
-                    // Show this section if it's hidden (e.g. style display block)
-                    parentSection.style.height = 'fit-content';
-                }
-
-                // Optionally hide other sections to simulate "opening only this section"
-                document.querySelectorAll('.select-1').forEach(section => {
-                    if (section !== parentSection) {
-                        section.style.display = 'none';
-                    }
-                });
+            // Optional: If you want to highlight the selected menu item
+            const selectedItem = document.querySelector(`.item[data-content="${hash}"]`);
+            if (selectedItem) {
+                selectedItem.classList.add('selected');  // add some CSS for .active to highlight
             }
-        });
+            // 3. Show the parent .select section that contains it
+            // For example, for salad, it's inside #select-2
+            const parentSection = selectedItem.closest('.select');
+            if (parentSection) {
+                // Show this section if it's hidden (e.g. style display block)
+                parentSection.style.height = 'fit-content';
+            }
 
-    </script>
-</body>
+            // Optionally hide other sections to simulate "opening only this section"
+            document.querySelectorAll('.select-1').forEach(section => {
+                if (section !== parentSection) {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
 
 </html>

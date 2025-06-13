@@ -41,7 +41,7 @@
             justify-content: center;
         }
 
-        #dishes figure {
+        .dishes figure {
             text-align: center;
             width: 60%;
             transform: scaleY(1.1);
@@ -52,7 +52,7 @@
             opacity: 1;
         }
 
-        #dishes figcaption {
+        .dishes figcaption {
             height: fit-content;
         }
 
@@ -62,7 +62,7 @@
             display: block;
         }
 
-        #dishes img {
+        .dishes img {
             width: 100%
         }
 
@@ -73,7 +73,7 @@
             width: 100%;
         }
 
-        #dishes {
+        .dishes {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             row-gap: 9vw;
@@ -111,108 +111,123 @@
             z-index: 5;
             position: relative;
         }
-
     </style>
 </head>
 
 <body>
-        <nav>
-            <!-- Dropdown Content -->
-            <div class="content" id="dropdwn">
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="products.html">All Items</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <!-- Menu Icon -->
-            <figure>
-                <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
-            </figure>
-        </nav>
-        <header>
-            <div class="cover">
-                <img src="Images.html/menu.png" alt="Responsive Image" />
-                <div class="gradient"></div>
-                <div class="overlay"></div>
-            </div>
-        </header>
+    <!-- Navigation bar at the top -->
+    <nav aria-label="Main navigation">
+        <!-- Menu Icon (clickable image for dropdown) -->
+        <figure>
+            <img id="move" src="Images.html/menu-icon.png" alt="Open navigation menu" onclick="drop()" style="cursor:pointer;"
+                tabindex="0" role="button" aria-label="Open navigation menu">
+        </figure>
+        <!-- Dropdown menu links -->
+        <div class="content" id="dropdwn">
+            <a href="index.html" tabindex="0" aria-label="Home page">Home</a>
+            <a href="menu.html" tabindex="0" aria-label="Menu page">Menu</a>
+            <a href="products.html" tabindex="0" aria-label="All items page">All Items</a>
+            <a href="contact.html" tabindex="0" aria-label="Contact page">Contact</a>
+        </div>
+    </nav>
+    <header>
+        <div class="cover">
+            <img src="Images.html/menu.png" alt="Dug & Betty's menu cover image" />
+            <div class="gradient" aria-hidden="true"></div>
+            <div class="overlay" aria-hidden="true"></div>
+        </div>
+    </header>
     <figure class="banner">
-        <img src="Images.html/menu-banner.png" alt="Menu Banner" />
+        <img src="Images.html/menu-banner.png" alt="Menu banner with ice cream and desserts" />
     </figure>
     <main>
         <section class="menu-4 menu-view">
             <h2>Frozen Desserts</h2>
-            <div class="frozen-desserts">
-                <figure class="pink">
-                    <a href="products.html#premium"><img src="Images.html/pint.png"></a>
+            <div class="dishes">
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#premium" aria-label="View more about Premium ice cream"><img src="Images.html/pint.png" alt="Premium ice cream pint"></a>
                     <h4>View More</h4>
                     <figcaption>
-                        Pints
+                        Premium
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#parfaits"><img src="Images.html/sundae.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#parfaits" aria-label="View more about Parfaits"><img src="Images.html/sundae1.png" alt="Parfait dessert"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Parfaits
                     </figcaption>
                 </figure>
-                <figure class="pink">
-                    <a href="products.html#cookie"><img src="Images.html/cookie.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#cookie" aria-label="View more about Cookie Sandwich"><img src="Images.html/cookie.png" alt="Ice cream cookie sandwich"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Cookie Sandwich
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#softServe"><img src="Images.html/cones.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#softServe" aria-label="View more about Soft Serve"><img src="Images.html/cones.png" alt="Soft serve ice cream cone"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Soft Serve
+                    </figcaption>
+                </figure>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#twister" aria-label="View more about Twister ice cream"><img src="Images.html/twister.png" alt="Twister ice cream"></a>
+                    <h4>View More</h4>
+                    <figcaption>
+                        Twister
+                    </figcaption>
+                </figure>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#sundaes" aria-label="View more about Sundaes"><img src="Images.html/sundae.png" alt="Ice cream sundae"></a>
+                    <h4>View More</h4>
+                    <figcaption>
+                        Sundaes
                     </figcaption>
                 </figure>
             </div>
         </section>
         <section class="menu-4 menu-view">
             <h2>Dishes</h2>
-            <div id="dishes">
-                <figure class="pink">
-                    <a href="products.html#salad"><img src="Images.html/salad.png"></a>
+            <div class="dishes">
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#salad" aria-label="View more about Salads"><img src="Images.html/salad.png" alt="Salad dish"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Salads
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#sandwich"><img src="Images.html/sandwich.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#sandwich" aria-label="View more about Sandwiches"><img src="Images.html/sandwich.png" alt="Sandwich"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Sandwiches
                     </figcaption>
                 </figure>
-                <figure class="pink">
-                    <a href="products.html#hotDogs"><img src="Images.html/hot.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#hotDogs" aria-label="View more about Hot Dogs"><img src="Images.html/hot.png" alt="Hot dog"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Hot Dogs
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#pastry"><img src="Images.html/pastry.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#pastry" aria-label="View more about Pastries"><img src="Images.html/pastry.png" alt="Pastry"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Pastries
                     </figcaption>
                 </figure>
-                <figure class="pink">
-                    <a href="products.html#milkShakes"><img src="Images.html/shake.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#milkShakes" aria-label="View more about Milkshakes"><img src="Images.html/shake.png" alt="Milkshake"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Milkshakes
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#drink"><img src="Images.html/drink.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#drink" aria-label="View more about Beverages"><img src="Images.html/drink.png" alt="Beverage"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Beverages
@@ -223,29 +238,29 @@
         <section class="menu-4 menu-view">
             <h2>Specialties</h2>
             <div class="frozen-desserts">
-                <figure class="pink">
-                    <a href="products.html#vegan"><img src="Images.html/vegan.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#vegan" aria-label="View more about Vegan options"><img src="Images.html/vegan.png" alt="Vegan dessert"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Vegan
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#dairyFree"><img src="Images.html/dairy.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#dairyFree" aria-label="View more about Dairy Free options"><img src="Images.html/dairy.png" alt="Dairy free dessert"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Dairy Free
                     </figcaption>
                 </figure>
-                <figure class="pink">
-                    <a href="products.html#dogSafe"><img src="Images.html/dog.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#dogSafe" aria-label="View more about Dog Safe items"><img src="Images.html/dog.png" alt="Dog safe dessert"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Dog Safe
                     </figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#glutenFree"><img src="Images.html/gluten-free.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#glutenFree" aria-label="View more about Gluten Free options"><img src="Images.html/gluten-free.png" alt="Gluten free dessert"></a>
                     <h4>View More</h4>
                     <figcaption>
                         Gluten Free
@@ -264,15 +279,21 @@
             </div>
             <div class="footer-middle">
                 <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
+                    <a href="index.html" aria-label="Home page">Home</a> |
+                    <a href="menu.html" aria-label="Menu page">Menu</a> |
+                    <a href="products.html" aria-label="All items page">All Items</a> |
+                    <a href="contact.html" aria-label="Contact page">Contact</a>
                 </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <p><a href="mailto:dugandbettys@gmail.com" class="email" aria-label="Email Dug and Betty's">dugandbettys@gmail.com</a></p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
-                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0" aria-label="Visit our Facebook page"><img id="facebook-1"
+                            src="Images.html/facebookl.png"
+                            alt="Facebook logo"
+                            onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0" aria-label="Visit our Instagram page"><img id="instagram-1"
+                            src="Images.html/instagram1.png"
+                            alt="Instagram logo"
+                            onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
                 </div>
             </div>
             <div class="footer-right">
@@ -339,6 +360,15 @@
         dropdown.classList.toggle("active");
         icon.classList.toggle("rotate", !isOpen);
     }
+    document.getElementById("move").addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault(); // prevent scrolling on Space
+            drop(); // call the existing function
+        }
+    });
+    document.getElementById("move").addEventListener("focus", function () {
+        drop(); // Open dropdown when image gets focus
+    });
 </script>
 
 </html>

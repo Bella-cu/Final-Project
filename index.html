@@ -1,147 +1,236 @@
+<!--
+  Dug & Betty's Ice Creamery Homepage
+  This page displays the main landing content, navigation, menu highlights, about section, reviews, and footer.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Set character encoding for the page -->
     <meta charset="UTF-8">
+    <!-- Make the page responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
     <title>Dugandbettys</title>
+    <!-- Favicon for browser tab -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Main CSS file for additional styles -->
     <link rel="stylesheet" href="CSS/CSS.css">
+    <!-- Google Fonts for custom text styles -->
     <link href="https://fonts.googleapis.com/css?family=Chewy:regular" rel="stylesheet" />
+    <!-- Google Fonts for Raleway font -->
     <link
         href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
+    <!-- Google Fonts for Bebas Neue font -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
-
 </head>
+<!-- Inline CSS for page styling -->
 <style>
+    /* Styles the main title at the top of the page */
     .title {
         color: #7ad0e2;
+        /* Blue color for the title */
         left: 5%;
+        /* Moves the title to the right */
         margin-top: -.1%;
+        /* Slightly moves the title up */
         z-index: 5;
+        /* Makes sure the title is above other elements */
         position: absolute;
+        /* Allows the title to be placed exactly */
     }
 
+    /* Wrapper for menu image and overlay */
     .menu-wrapper {
         position: relative;
+        /* Needed for overlay positioning */
         width: 100%;
+        /* Full width */
         border-bottom: 10px solid #e2bfa0;
+        /* Thick tan border */
     }
 
+    /* Menu container styling */
     #menu {
         justify-content: center;
+        /* Center content horizontally */
         width: 100%;
+        /* Full width */
         display: flex;
+        /* Flexbox layout */
         height: fit-content;
+        /* Height fits content */
         align-items: center;
+        /* Center vertically */
         margin-top: 0%;
+        /* No top margin */
     }
 
+    /* Image slider styling */
     #slide {
         width: 100%;
+        /* Full width */
         display: block;
+        /* Block element */
         border-radius: 10px 10px 0 0;
+        /* Rounded top corners */
     }
 
+    /* Overlay for gradient effect on images */
     .image-overlay {
         position: absolute;
+        /* Overlays image */
         top: 0;
+        /* Top of parent */
         left: 0;
+        /* Left of parent */
         width: 100%;
+        /* Full width */
         height: 100%;
+        /* Full height */
         background-image: linear-gradient(135deg, #79cee0, #ff89a4);
+        /* Blue to pink gradient */
         opacity: 0.54;
+        /* Semi-transparent */
         border-radius: 10px 10px 0 0;
+        /* Match image corners */
         pointer-events: none;
+        /* Clicks pass through */
         /* lets you click through the overlay */
     }
 
+    /* Button styling for menu button */
     button {
         position: absolute;
+        /* Overlays menu image */
         background-color: #79d3de;
+        /* Blue background */
         color: rgb(0, 0, 0);
+        /* Black text */
         font-family: 'Bebas Neue', sans-serif;
+        /* Custom font */
         font-size: clamp(1vw, 3vw, 4vw);
+        /* Responsive font size */
         font-weight: 100;
+        /* Thin font */
         border: none;
+        /* No default border */
         padding: 1% 3%;
+        /* Padding inside button */
         cursor: pointer;
+        /* Pointer on hover */
         transition: .5s linear;
+        /* Smooth transition */
         border: 4px solid #ff89a4;
+        /* Pink border */
     }
 
+    /* Button hover effect */
     button:hover {
         background-color: #ff89a4;
+        /* Pink background */
         border: 4px solid #79d3de;
+        /* Blue border */
         transform: scale(1.2);
+        /* Grows on hover */
         color: #000000;
+        /* Black text */
     }
 
+    /* Layout for frozen dessert figures */
     .frozen-desserts {
         display: flex;
+        /* Flexbox layout */
         justify-content: space-between;
+        /* Space between items */
         flex-wrap: nowrap;
+        /* No wrapping */
         width: 100%;
+        /* Full width */
     }
 
+    /* Section border and rounded corners for menu */
     #menu-section {
         border: 4px solid #e2bfa0;
+        /* Tan border */
         overflow: hidden;
+        /* Hide overflow */
         border-radius: 11px 11px 0 0;
+        /* Rounded top corners */
     }
 
+    /* Individual frozen dessert figure styling */
     .frozen-desserts figure {
         flex-wrap: nowrap;
+        /* No wrapping */
         text-align: center;
+        /* Center text */
         width: 20%;
+        /* Each takes 20% width */
         display: flex;
+        /* Flexbox */
         flex-direction: column;
+        /* Stack vertically */
         align-items: center;
+        /* Center horizontally */
         overflow: hidden;
+        /* Hide overflow */
         justify-content: center;
+        /* Center vertically */
     }
 
+    /* Images inside frozen dessert figures */
     .frozen-desserts img {
         width: 100%;
+        /* Full width of figure */
         height: auto;
+        /* Keep aspect ratio */
         display: block;
+        /* Block element */
     }
 
+    /* Caption for frozen dessert figures */
     .frozen-desserts figcaption {
         opacity: 1;
+        /* Fully visible */
     }
 
-    /* figure styling */
+    /* All figures are positioned relative for overlays */
     figure {
         position: relative;
     }
 
-    /* figcaption styling */
+    /* All figcaptions are above overlays */
     figcaption {
         z-index: 5;
         position: relative;
     }
 
-    /* Styling for pink and blue figure borders */
+    /* Pink border for some figures */
     .pink {
         border: 7px solid #fa97ac;
     }
 
+    /* Pink border for figcaption */
     .pink figcaption {
         margin-top: -2%;
         border-top: 8px solid #fa97ac;
     }
 
+    /* Blue border for some figures */
     .blue {
         border: 7px solid #88cad1;
     }
 
+    /* Blue border for figcaption */
     .blue figcaption {
         margin-top: -2%;
         border-top: 8px solid #88cad1;
     }
 
+    /* Specialties section text styling */
     .menu-4 span {
         color: black;
         text-transform: capitalize;
@@ -151,24 +240,31 @@
         font-family: 'raleway', sans-serif;
     }
 
+    /* Specialties section heading spacing */
     .menu-4 h2 {
         margin-top: 5vw;
         padding-bottom: 2%;
     }
 
+    /* About section styling */
     #about {
         margin-top: 10%;
         padding: 3% 5%;
         background-color: #fa97ac;
+        /* Pink background */
         color: black;
+        /* Black text */
         border: 4px solid #7ad0e2;
+        /* Blue border */
     }
 
+    /* About section heading alignment */
     #about h2 {
         text-align: center;
         padding-bottom: 1.5%;
     }
 
+    /* Subheading for reviews */
     #review-sub {
         color: black;
         text-transform: capitalize;
@@ -178,17 +274,23 @@
         padding-top: 2%;
     }
 
+    /* Grid layout for review images */
     #review-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
         grid-template-rows: repeat(2, 1fr);
+        /* 2 rows */
         gap: 5%;
+        /* Space between items */
     }
 
+    /* Review images fill their grid cell */
     #review-grid img {
         width: 100%;
     }
 
+    /* Reviews section styling */
     #reviews {
         padding: 5%;
         grid-template-columns: repeat(2, 1fr);
@@ -197,139 +299,108 @@
         margin-top: 10%;
         justify-content: center;
         background-color: #79d3de;
+        /* Blue background */
         border: 4px solid #fa97ac;
+        /* Pink border */
         align-items: center;
         margin-top: 6%;
     }
 </style>
 
 <body>
-    <nav>
-        <!-- Dropdown Content -->
-        <div class="content" id="dropdwn">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="products.html">All Items</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <!-- Menu Icon -->
+    <!-- Navigation bar at the top -->
+    <nav aria-label="Main Navigation">
         <figure>
-            <img id="move" src="Images.html/menu-icon.png" alt="Menu Icon" onclick="drop()" style="cursor:pointer;">
+            <img id="move" src="Images.html/menu-icon.png" alt="Open navigation menu" onclick="drop()" style="cursor:pointer;"
+                tabindex="0" role="button" aria-label="Open navigation menu">
         </figure>
+        <div class="content" id="dropdwn" aria-label="Dropdown Navigation">
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="menu.html" aria-label="Menu">Menu</a>
+            <a href="products.html" aria-label="All Items">All Items</a>
+            <a href="contact.html" aria-label="Contact">Contact</a>
+        </div>
     </nav>
-
     <header>
         <div class="cover">
-            <img src="Images.html/Cover.png" alt="Responsive Image" />
+            <img src="Images.html/Cover.png" alt="Dug & Betty's storefront and logo" />
             <div class="gradient"></div>
             <div class="overlay"></div>
-            <img id="logo" src="Images.html/logo.png" />
-            <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span>
-            </h1>
+            <img id="logo" src="Images.html/logo.png" alt="Dug & Betty's main logo" />
+            <h1 class="title">Doug <span style="color: white;">&</span> <span style="color: #ff87a3;">Betty's</span></h1>
             <p class="sub">Gourmet creations | wine & spirits | we ❤️ dogs</p>
         </div>
     </header>
     <figure class="banner">
-        <img src="Images.html/freepik__adjust__78665.png">
+        <img src="Images.html/freepik__adjust__78665.png" alt="Ice cream cones illustration banner">
     </figure>
     <main>
         <div id="menu-section">
             <div id="menu">
                 <div class="menu-wrapper">
-                    <img id="slide">
+                    <img id="slide" alt="Slideshow of featured menu items">
                     <div class="image-overlay"></div>
                 </div>
                 <button onclick="window.location.href='menu.html'">Menu</button>
             </div>
         </div>
-
         <section class="menu-4 menu-view">
             <h2>Specialties</h2>
             <div class="frozen-desserts">
-                <figure class="pink">
-                    <a href="products.html#vegan"><img src="Images.html/vegan.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#vegan" aria-label="Vegan section in products page"><img src="Images.html/vegan.png" alt="Vegan specialty icon"></a>
                     <h4>View More</h4>
-                    <figcaption>
-                        Vegan
-                    </figcaption>
+                    <figcaption>Vegan</figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#dairyFree"><img src="Images.html/dairy.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#dairyFree" aria-label="Dairy free section in products page"><img src="Images.html/dairy.png" alt="Dairy free specialty icon"></a>
                     <h4>View More</h4>
-                    <figcaption>
-                        Dairy Free
-                    </figcaption>
+                    <figcaption>Dairy Free</figcaption>
                 </figure>
-                <figure class="pink">
-                    <a href="products.html#dogSafe"><img src="Images.html/dog.png"></a>
+                <figure class="pink" tabindex="0">
+                    <a href="products.html#dogSafe" aria-label="Dog safe section in products page"><img src="Images.html/dog.png" alt="Dog safe specialty icon"></a>
                     <h4>View More</h4>
-                    <figcaption>
-                        Dog Safe
-                    </figcaption>
+                    <figcaption>Dog Safe</figcaption>
                 </figure>
-                <figure class="blue">
-                    <a href="products.html#glutenFree"><img src="Images.html/gluten-free.png"></a>
+                <figure class="blue" tabindex="0">
+                    <a href="products.html#glutenFree" aria-label="Gluten free section in products page"><img src="Images.html/gluten-free.png" alt="Gluten free specialty icon"></a>
                     <h4>View More</h4>
-                    <figcaption>
-                        Gluten Free
-                    </figcaption>
+                    <figcaption>Gluten Free</figcaption>
                 </figure>
             </div>
         </section>
         <section class="menu-4">
             <h2>Trending Now <span>- What’s hot (and cold) right now.</span></h2>
-            <div class="frozen-desserts">
-                <figure class="pink"><img src="Images.html/Trend1.png">
-                    <figcaption>Pistachio Ice Cream – $7.00</figcaption>
-                </figure>
-                <figure class="blue"><img src="Images.html/Trend2.png">
-                    <figcaption>California Chicken Clubhouse - $17.00</figcaption>
-                </figure>
-                <figure class="pink"><img src="Images.html/Trend3.png">
-                    <figcaption>Ube Ice Cream - $6.00</figcaption>
-                </figure>
+            <div class="frozen-desserts" tabindex="0">
+                <figure class="pink"><img src="Images.html/Trend1.png" alt="Pistachio Ice Cream"><figcaption>Pistachio Ice Cream – $7.00</figcaption></figure>
+                <figure class="blue"><img src="Images.html/Trend2.png" alt="California Chicken Clubhouse"><figcaption>California Chicken Clubhouse - $17.00</figcaption></figure>
+                <figure class="pink"><img src="Images.html/Trend3.png" alt="Ube Ice Cream"><figcaption>Ube Ice Cream - $6.00</figcaption></figure>
             </div>
         </section>
-        <article id="about">
+        <article id="about" tabindex="0">
             <h2>About</h2>
-            <p>Since its launch in 2019, Dug & Betty's Ice Creamery has been establishing itself as one of
-                Winnipeg's
-                latest culinary hot spots. The Parisian-inspired setting is unlike anything this side of the
-                Prairies -
-                home to tantalizing small batch gourmet ice cream creations such as Strawberry Honey Balsamic
-                Pepper,
-                Sour Cherry with Dark Chocolate, Coconut Chocolate Fudge Oreo, Ube, and Matcha.<br>
-
-                Dug & Betty's Ice Creamery is the latest brain child of Chef Fern Kirouac. It's located in the heart
-                of
-                Winnipeg's French quarter, Saint-Boniface; across the street from his other culinary success,
-                InFerno's
-                Bistro. It was named after his cherished basset hounds (who are the unofficial ambassadors). Also
-                named
-                after the duo are creations like the Dashing Dug Sundae and the Bad Betty Sundae.<br>
-
-                The animated menu also offers a wide range of lush spirits like champagne / beer floats and a bold
-                selection of fine wines. These can be enjoyed inside the 30-seat establishment or outdoors on the
-                patio.
+            <p tabindex="0">Since its launch in 2019, Dug & Betty's Ice Creamery has been establishing itself as one of Winnipeg's latest culinary hot spots. The Parisian-inspired setting is unlike anything this side of the Prairies - home to tantalizing small batch gourmet ice cream creations such as Strawberry Honey Balsamic Pepper, Sour Cherry with Dark Chocolate, Coconut Chocolate Fudge Oreo, Ube, and Matcha.<br>
+                Dug & Betty's Ice Creamery is the latest brain child of Chef Fern Kirouac. It's located in the heart of Winnipeg's French quarter, Saint-Boniface; across the street from his other culinary success, InFerno's Bistro. It was named after his cherished basset hounds (who are the unofficial ambassadors). Also named after the duo are creations like the Dashing Dug Sundae and the Bad Betty Sundae.<br>
+                The animated menu also offers a wide range of lush spirits like champagne / beer floats and a bold selection of fine wines. These can be enjoyed inside the 30-seat establishment or outdoors on the patio.
             </p>
         </article>
-        <section id="reviews">
+        <section id="reviews" tabindex="0">
             <div>
                 <h2>Customer Reviews</h2>
                 <p id="review-sub">"Naturally loved by our customers."</p>
             </div>
-            <div id="review-grid">
+            <div id="review-grid" tabindex="0">
                 <figure>
-                    <img src="Images.html/review1.png">
+                    <img src="Images.html/review1.png" alt="Customer review 1">
                 </figure>
                 <figure>
-                    <img src="Images.html/review2.png">
+                    <img src="Images.html/review2.png" alt="Customer review 2">
                 </figure>
                 <figure>
-                    <img src="Images.html/review3.png">
+                    <img src="Images.html/review3.png" alt="Customer review 3">
                 </figure>
                 <figure>
-                    <img src="Images.html/review4.png">
+                    <img src="Images.html/review4.png" alt="Customer review 4">
                 </figure>
             </div>
         </section>
@@ -342,21 +413,33 @@
                     Winnipeg, Manitoba, Canada R2H 2N4<br>
                     204-417-0026</p>
             </div>
-
             <div class="footer-middle">
-                <div class="nav">
-                    <a href="index.html">Home</a> |
-                    <a href="menu.html">Menu</a> |
-                    <a href="products.html">All Items</a> |
-                    <a href="contact.html">Contact</a>
+                <div class="nav" aria-label="Footer Navigation">
+                    <a href="index.html" aria-label="Home">Home</a> |
+                    <a href="menu.html" aria-label="Menu">Menu</a> |
+                    <a href="products.html" aria-label="All Items">All Items</a> |
+                    <a href="contact.html" aria-label="Contact">Contact</a>
                 </div>
-                <p><a href="mailto:dugandbettys@gmail.com" class="email">dugandbettys@gmail.com</a></p>
+                <p>
+                    <a href="mailto:dugandbettys@gmail.com" class="email" aria-label="Email Dug & Betty's">
+                        dugandbettys@gmail.com
+                    </a>
+                </p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0"><img id="facebook-1" src="Images.html/facebookl.png" onclick=" document.getElementById('facebook-1').src='Images.html/facebook_1384053.png' "></a>
-                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0"><img id="instagram-1" src="Images.html/instagram1.png" onclick=" document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'"></a>
+                    <a href="https://www.facebook.com/dugandbettys/" target="_blank" tabindex="0" aria-label="Dug & Betty's Facebook Page">
+                        <img id="facebook-1"
+                            src="Images.html/facebookl.png"
+                            alt="Facebook icon"
+                            onclick="document.getElementById('facebook-1').src='Images.html/facebook_1384053.png'">
+                    </a>
+                    <a href="https://www.instagram.com/dugandbettys/" target="_blank" tabindex="0" aria-label="Dug & Betty's Instagram Page">
+                        <img id="instagram-1"
+                            src="Images.html/instagram1.png"
+                            alt="Instagram icon"
+                            onclick="document.getElementById('instagram-1').src='Images.html/instagram_2111463.png'">
+                    </a>
                 </div>
             </div>
-
             <div class="footer-right">
                 <h3>Hours of Operation</h3>
                 <p>
@@ -374,53 +457,82 @@
     </footer>
 </body>
 <script>
+    // Set the starting index for the image slider
+    var i = 0; // start point
 
-    var i = 0;//start point
-    var images = [];//makes an empty array
-    var time = 1000;//time in milliseconds
+    // Create an empty array to hold image paths
+    var images = []; // makes an empty array
 
-    images[0] = 'Images.html/sls1.png';
-    images[1] = 'Images.html/sls2.png';
-    images[2] = 'Images.html/sls3.png';
-    images[3] = 'Images.html/sls4.png';
-    images[4] = 'Images.html/sls5.png';
-    images[5] = 'Images.html/sls6.png';
+    // Set the time between image changes
+    var time = 1000; // time in milliseconds
 
-    //change image
+    // images in the slideshow
+    images[0] = 'Images.html/sls1.png'; // first image
+    images[1] = 'Images.html/sls2.png'; // second image
+    images[2] = 'Images.html/sls3.png'; // third image
+    images[3] = 'Images.html/sls4.png'; // fourth image
+    images[4] = 'Images.html/sls5.png'; // fifth image
+    images[5] = 'Images.html/sls6.png'; // sixth image
+
+    // Function to change the image in the slider
     function changeImg() {
-        document.getElementById('slide').src = images[i]
+        // Set the image with id 'slide' to the current image
+        document.getElementById('slide').src = images[i];
 
+        // If not at the last image, go to the next image
         if (i < images.length - 1) {
-            i++; //if not at the end, go to next img 
+            i++; // go to next image
         } else {
-            i = 0; //reset to 0
+            // If at the end, start over
+            i = 0; // reset to first image
         }
 
+        // Change img again after 1 second
         setTimeout(changeImg, time);
     }
+    // When the page loads, start the slidshow
     window.onload = changeImg;
 
-
-    //Background "Appears"
+    // Add a scroll event listener to the window (listening for if user is scrolling or not)
     window.addEventListener("scroll", function () {
+        //Targets the navigation bar to impliment the code below
         const nav = document.querySelector("nav");
+        // If the page is scrolled down more than 10 pixels
         if (window.scrollY > 10) {
+            // Changes the nav background color to light pink
             nav.style.backgroundColor = "#f7a3b7ab";
         } else {
+            // if i scroll more than 10 px change the background
             nav.style.backgroundColor = "#ff87a3";
         }
     });
 
-
+    // Function to show and hide the dropdown menu
     function drop() {
+        // Gets the dropdown menu and menu icon
         const dropdown = document.getElementById("dropdwn");
         const icon = document.getElementById("move");
 
+        // Checks if the dropdown is currently open
         const isOpen = dropdown.classList.contains("active");
 
+        // show/hide the dropdown
         dropdown.classList.toggle("active");
+        // Toggle the rotate animation
         icon.classList.toggle("rotate", !isOpen);
     }
+    // Add a keyboard event listener to the menu icon for tabbing
+    document.getElementById("move").addEventListener("keydown", function (e) {
+        // If the user presses Enter or Space
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault(); // Prevent scrolling when pressing Space
+            drop(); // Open or close the dropdown menu
+        }
+    });
+    // Add a focus event listener to the menu icon 
+    document.getElementById("move").addEventListener("focus", function () {
+        drop(); // Open the dropdown when the icon gets focused on
+    });
 </script>
 
 </html>

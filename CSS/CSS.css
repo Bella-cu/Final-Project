@@ -1,117 +1,167 @@
 * {
+    /*styles all elements*/
     margin: 0;
+    /*removes default margin*/
     padding: 0;
+    /*removes default padding*/
+    /* removes default padding from all elements */
 }
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    margin-top: -1%;
-}
-
 
 h2 {
+    /*default style for h2 elements*/
     font-family: 'bebas-neue', sans-serif;
+    /*sets the font*/
     font-size: 3vw;
+    /*default font size*/
+    /* sets h2 font size responsively */
     text-transform: uppercase;
+    /*makes all the h2 uppercase by default*/
     transform: scaleY(1.5);
+    /*makes the text longer*/
+    letter-spacing: 0.05em;
+    line-height: 1.1;
 }
 
 p {
+    /*default p style*/
     font-family: 'raleway', sans-serif;
+    /*font for p tags*/
     font-size: clamp(8px, 1.2vw, 2vw);
-    line-height: clamp(1px, 5vh, 5.5vh);
+    /*makes the text responsive*/
+    /* responsive font size for p */
+    line-height: 1.5;
 }
 
 footer {
+    /*style for the footer*/
     background-color: #fdf5dc;
+    /*light yellow background color*/
     padding: 4% 2% 1% 2%;
-    font-family: 'Arial', sans-serif;
+    /*padding 4% top 2% left and right and 1% bottom*/
+    /* sets footer padding */
+    font-family: 'raleway', sans-serif;
+    /*font for the footer text*/
     font-size: 1.2vw;
     color: #444;
+    line-height: 1.4;
 }
 
 .footer-container {
+    /*style for the container - contains all the 3 sectons of the footer*/
     display: flex;
+    /*make the container a flex arrangement*/
     flex-wrap: nowrap;
+    /*stops the contaner from stacking on a smaller screen*/
+    /* prevents stacking on small screens */
     justify-content: space-between;
+    /*evenly adds space between the items */
     text-align: center;
+    /*ceners all text*/
 }
 
+
 .footer-left,
+/*style for the 3 sections withing the container*/
 .footer-middle,
 .footer-right {
     flex: 1;
     min-width: 5%;
+    /*stops it from shrinking too much on smaller screens*/
+    /* minimum width for footer sections */
     margin: 10px;
 }
 
+.copyright {
+    /*style for the copyright text in footer*/
+    width: 100%;
+    text-align: center;
+    /*centers text*/
+    /* centers copyright text */
+    margin-top: -1%;
+}
+
 .logo {
+    /*style for the logo*/
     width: 20vw;
     margin-bottom: 10px;
+    /* space below logo */
 }
 
 nav img {
     width: clamp(13px, 3vw, 4vw);
+    /* responsive nav image width */
 }
-
 
 nav {
     position: fixed;
     top: 0;
     right: 0;
+    /* aligns nav to right */
     width: 100%;
     background-color: #ff87a3;
     z-index: 1000;
+    /*makes it above all*/
     display: flex;
     align-items: center;
     justify-content: right;
+    /*makes the contnet align right*/
     flex-direction: row;
     gap: 2vw;
     padding: 1vw 4vw;
     transition: 1s linear;
 }
 
-
 .nav {
     text-decoration: none;
     display: inline-block;
     color: #444;
+    /* nav text color */
     font-weight: bold;
     margin: 0 5px;
     font-size: clamp(8px, 1.5vw, 1.5vw);
+    /*makes fot responsive*/
     transition: transform 0.5s ease,
         color 0.3s ease;
 }
 
-
 .nav a {
     text-decoration: none;
+    /*removes text decoration*/
     display: inline-block;
     color: #444;
+    /* nav link color */
     font-weight: bold;
     margin: 0 5px;
     font-size: clamp(8px, 1.5vw, 1.5vw);
+    /*makes font size responsive*/
     transition: transform 0.5s ease, color 0.3s ease;
+    letter-spacing: 0.03em;
+    word-spacing: 0.05em;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
     color: #e94973;
     text-decoration: underline;
     transform: scale(1.2);
+    /* nav link hover effect */
 }
 
 #dropdwn {
     opacity: 0;
     transform: translateX(10%);
     pointer-events: none;
+    /* disables pointer events by default */
     position: absolute;
     right: 10vw;
     background-color: #fff;
+    /*background color*/
     border: 2px solid #d8f8ff;
     z-index: 10;
     display: flex;
     flex-direction: row;
+    /*makes the dropdwn display in a row*/
     transition: 0.4s ease;
 }
 
@@ -119,50 +169,87 @@ nav {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
+    /* enables pointer events when active */
 }
-
 
 #dropdwn a {
     padding: 1vw;
     margin: 0;
     text-decoration: none;
     color: #333;
+    /* dropdown link color */
     display: block;
     border: 2px solid #fff;
-        font-family: 'raleway', sans-serif;
+    font-family: 'raleway', sans-serif;
     font-size: clamp(8px, .9vw, 1vw);
 }
 
-#dropdwn a:hover {
+#dropdwn a:hover,
+#dropdwn a:focus,
+/* dropdown link hover/focus/active states */
+#dropdwn a:active {
     background-color: #ffeaef;
     border: 2px solid #d8f8ff;
+    /* dropdown link hover border */
 }
 
 #move {
     transition: transform 1s ease;
+    /* smooth transform transition */
 }
 
 #move.rotate {
     transform: rotate(-90deg);
+    /* rotates element */
 }
 
 figcaption {
     background-color: #eafbff;
     text-align: center;
+    /* center text in figcaption */
     width: 100%;
+    /* figcaption full width */
     height: 100%;
     padding: 8px;
+    /* figcaption padding */
     font-family: 'Raleway', sans-serif;
     font-size: clamp(0.8rem, 1vw, 2vw);
+    /* responsive font size */
     box-sizing: border-box;
 }
 
-.menu-view figure:hover h4 {
+.menu-view figure:hover h4,
+.menu-view figure:focus h4,
+/* h4 visible on hover/focus/active */
+.menu-view figure:active h4 {
+    opacity: 1;
+    font-size: 2vw;
+    /* h4 font size on hover */
+}
+
+.menu-view a:hover h4,
+.menu-view a:focus h4,
+/* h4 visible on link hover/focus/active */
+.menu-view a:active h4 {
     opacity: 1;
     font-size: 2vw;
 }
 
-.menu-view figure:hover img {
+.menu-view figure:hover img,
+.menu-view figure:focus img,
+/* image effect on hover/focus/active */
+.menu-view figure:active img {
+    cursor: pointer;
+    transform: scale(1.2);
+    /* scale image  */
+    filter: brightness(30%);
+    /* darkens image  */
+}
+
+.menu-view a:hover img,
+.menu-view a:focus img,
+/* img link effect on hover/focus/active */
+.menu-view a:active img {
     cursor: pointer;
     transform: scale(1.2);
     filter: brightness(30%);
@@ -171,64 +258,96 @@ figcaption {
 .menu-view figure img {
     transition: transform 1s ease, filter 1s ease;
     height: 100%;
+    /* figure image full height */
 }
 
 .menu-view figure h4 {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* centers h4 in figure */
     transform: translate(-50%, -50%);
     color: aliceblue;
     z-index: 2;
     opacity: 0;
     pointer-events: none;
+    /*makes it so it doesnt affect hoveringover a*/
     margin: 0;
     transition: 1s ease;
+    /*lets the font size appear smooth*/
     font-size: 1.5vw;
     width: 100%;
 }
 
 .email {
     transform: scale(1.1);
+    /*make it a bit bigger than supposed to be*/
     font-weight: bold;
+    /*bolds the font*/
     display: block;
+    /* email is block element */
     margin: 5% 0;
     color: #e94973;
     transition: transform 0.3s ease, color 0.3s ease;
+    /*transition for scale and color*/
 }
 
-.email:hover {
+.email:hover,
+.email:focus,
+.email:active {
     color: #70b3c1;
     transform: scale(1.2);
+    /* email hover effect */
 }
 
 .social-icons img {
     width: clamp(20px, 3vw, 3vw);
+    /* responsive icon size */
     margin: 0 5px;
     transition: transform 0.3s linear;
+    /*transition for the scale */
 }
 
-.social-icons :hover {
+.social-icons img:hover,
+/*style when hovered on*/
+.social-icons img:focus,
+/*style when tabbed (infocus)*/
+.social-icons img:active
+
+/*style when it been clicked*/
+    {
     transform: scale(1.2);
     cursor: pointer;
+    /* pointer on social icon hover */
 }
 
-h3 {
+h3
+
+/*styles the h3 tag*/
+    {
     font-size: clamp(.5vw, 2vw, 3vw);
+    /*sets the min value preferred value and the max value for the h3*/
     color: #333;
     margin-bottom: 10px;
+    /* space below h3 */
 }
 
-footer p {
+footer p
+
+/*text in the footer style*/
+    {
     margin: 5px 0;
 }
 
 main {
+    /*styles the main tag*/
     margin: 0;
     padding: 5% 10%;
+    /* main content padding */
 }
 
 body {
+    /*styles the body tag*/
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -236,8 +355,10 @@ body {
 }
 
 .banner img {
+    /*style for the banner*/
     margin: 0;
     width: 100%;
+    /* banner image full width */
     padding: 0;
 }
 
@@ -250,72 +371,104 @@ body {
 
 .cover {
     height: min-content;
+    /*maks the height as tall as the smallest item within*/
     width: 100%;
     position: relative;
+    /* cover is relative */
     display: flex;
     align-items: center;
+    /*makes the cover vertically centered*/
 }
 
 .cover img {
-    position: relative;
     width: 100%;
     height: auto;
+    /* cover image auto height */
     max-width: 100%;
     z-index: 1;
     display: block;
 }
 
 #logo {
+    /*logo on the home page*/
     position: absolute;
+    /*lets my style the ligo within its block*/
     max-width: 25%;
     height: auto;
     right: 8%;
+    /* logo right position */
     z-index: 4;
 }
 
 h1 {
+    /*default for all h1 tags*/
     font-family: 'chewy', cursive;
+    /*font for h1*/
     font-size: 8vw;
+    /* h1 responsive font size */
+    letter-spacing: 0.03em;
+    line-height: 1.1;
 }
 
-.title {
+.title
+
+/*style for the title of the page*/
+    {
     font-size: 9vw;
     font-weight: 100;
     z-index: 100;
     color: #7ad0e2;
+    /* title color */
+    word-spacing: 0.2em;
+    line-height: 1.1;
 }
 
-.sub {
+.sub
+
+/*slogan on he cover page*/
+    {
     color: white;
     font-size: 2vw;
     position: absolute;
     left: 5.1%;
+    /* sub left position */
     top: 70%;
     z-index: 6;
     font-family: 'raleway', sans-serif;
+    letter-spacing: 0.02em;
+    word-spacing: 0.05em;
+    line-height: 1.3;
 }
-
 
 html {
     font-size: 62.5%;
+    /* base font size for rem */
 }
 
+.overlay
 
-.overlay {
+/*make the cover image darker so text is legible*/
+    {
     position: absolute;
     width: 100%;
     height: 100%;
+    /* overlay covers full area */
     opacity: 48%;
     z-index: 2;
     background-color: black;
 }
 
-.gradient {
+.gradient
+
+/*adds brand color to the cover image*/
+    {
     position: absolute;
     height: 100%;
     top: 0;
+    /* gradient starts at top */
     z-index: 3;
     width: 100%;
     opacity: 32%;
+    /* semi-transparent gradient */
     background-image: linear-gradient(to right, #79cee0, #ff87a3);
 }
